@@ -1,3 +1,4 @@
+from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from .forms import *
 # Create your views here.
@@ -13,16 +14,21 @@ def form(request):
     #         profile.save()
     # else:
     #     form = ProfileForm()
-    return render(request,'main/form.html',{'form':form})
+    return render(request,'main/form.html')
 def example(request):
     if request.method == 'POST':
+
         form = ProfileForm(request.POST)
+
         if form.is_valid():
-            profile = form.save(commit=False)
-            # profile.user = request.user
-            profile.save()
+            form.save()
+
+            return HttpResponseRedirect('/POST/')
+
+
     else:
         form = ProfileForm()
 
-
     return render(request,'main/example.html',{'form':form})
+
+
