@@ -23,7 +23,7 @@ def example(request):
         if form.is_valid():
             form.save()
 
-            return HttpResponseRedirect('/POST/')
+            # return HttpResponseRedirect('/POST/')
 
 
     else:

@@ -5,6 +5,7 @@ class Choices(models.Model):
     options=models.TextField()
     def __str__(self):
         return self.options
+
 class YesNo(models.Model):
     answer = models.CharField(max_length=10)
     def __str__(self):
@@ -23,6 +24,12 @@ class Profile(models.Model):
     def __str__(self):
         return self.email
 
+
+
+
+
+# class Questions(models.Model):
+#     q1 = models.CharField(max_length=255)
 
 # class Pro(models.Model):
 #     email = models.EmailField(max_length=100)
