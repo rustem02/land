@@ -8,3 +8,13 @@ class ProfileForm(forms.ModelForm):
         fields = '__all__'
 
 
+# class SettingsForm(forms.ModelForm):
+#     q1 = forms.BooleanField()
+#
+#     def __init__(self):
+#         if check_something():
+#             self.fields['q1'].initial = True
+#     class Meta:
+#         model = Pro
+
+

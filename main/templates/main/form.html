@@ -235,6 +235,7 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
                 </div>
 
             </div>
+
 	        <div role="form" class="wpcf7" id="wpcf7-f130-o5" lang="ru-RU" dir="ltr">
 <div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
 <form action="/#wpcf7-f130-o5" method="post" class="wpcf7-form init" novalidate="novalidate" data-status="init">
@@ -256,17 +257,17 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
         <input type="tel" name="tel-314" value="" size="40"
         class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel main__input input__phone"
         aria-required="true" aria-invalid="false" placeholder="+7 ( ) - -" /></span></p>
-
+    {% csrf_token %}
                     <p>Имеет ли управляющий (директор) техническое образование?</p> <br>
                     <span class="wpcf7-form-control-wrap menu-782">
                         <select name="menu-782" class="wpcf7-form-control wpcf7-select main__select" aria-invalid="false">
-                            <option value="">Имеет ли управляющий (директор) техническое образование?</option>
+                            <option value=""></option>
                             <option value="11">Да</option><option value="14">Нет</option></select></span><br />
 
                     <p>Есть ли у Вашего предприятия филиалы в других регионах РФ? (если есть, то в каких)</p> <br>
                     <span class="wpcf7-form-control-wrap menu-782">
                         <select name="menu-782" class="wpcf7-form-control wpcf7-select main__select" aria-invalid="false">
-                            <option value="">Есть ли у Вашего предприятия филиалы в других регионах РФ? (если есть, то в каких)</option>
+                            <option value=""></option>
                             <option value="11">Да</option><option value="14">Нет</option></select></span><br />
 
 
