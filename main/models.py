@@ -10,6 +10,7 @@ class YesNo(models.Model):
     def __str__(self):
         return self.answer
 
+
 class Profile(models.Model):
     email=models.EmailField(max_length=100)
     number=models.IntegerField()
