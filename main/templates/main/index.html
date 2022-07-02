@@ -429,7 +429,7 @@
 <header class="header">
     <div class="header__inner">
         <div class="header__left">
-            <a href="{% url 'index'%}" class="logo">Приводы<br> Датчики</a>
+            <a href="{% url 'index' %}" class="logo">Приводы<br> Датчики</a>
             <div class="header__text">Приводы, Датчики, Автоматика<br></div>
         </div>
         <div class="header__right">
@@ -452,62 +452,62 @@
                     <div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p>
                         <ul></ul>
                     </div>
-                    <form action="/#wpcf7-f8-o1" method="post" class="wpcf7-form init" novalidate="novalidate"
-                          data-status="init">
-                        <div style="display: none;">
-                            <input type="hidden" name="_wpcf7" value="8"/>
-                            <input type="hidden" name="_wpcf7_version" value="5.5.6.1"/>
-                            <input type="hidden" name="_wpcf7_locale" value="ru_RU"/>
-                            <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f8-o1"/>
-                            <input type="hidden" name="_wpcf7_container_post" value="0"/>
-                            <input type="hidden" name="_wpcf7_posted_data_hash" value=""/>
-                            <input type="hidden" name="_wpcf7_recaptcha_response" value=""/>
-                        </div>
-                        <h2 class="sectionHeading">Заказать звонок</h2>
-                        <p><span class="wpcf7-form-control-wrap text-399"><input type="text" name="text-399" value=""
-                                                                                 size="40"
-                                                                                 maxlength="40"
-                                                                                 class="wpcf7-form-control wpcf7-text main__input"
-                                                                                 aria-invalid="false"
-                                                                                 placeholder="Имя"/></span></p>
-                        <div class="form__info"><span style="color: #ff2d2d;">Внимание!</span> Оставьте актуальный номер
-                            телефона и мы
-                            перезвоним в течении часа! Пожалуйста, будьте в это время на связи!
-                        </div>
-                        <p><span class="wpcf7-form-control-wrap tel-519"><input type="tel" name="tel-519" value=""
-                                                                                size="40"
-                                                                                class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel main__input input__phone"
-                                                                                aria-required="true"
-                                                                                aria-invalid="false"
-                                                                                placeholder="+7 ( ) - -"/></span><br/>
-                            <span class="wpcf7-form-control-wrap email-192"><input type="email" name="email-192"
-                                                                                   value="" size="40"
-                                                                                   class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-email main__input"
-                                                                                   aria-invalid="false"
-                                                                                   placeholder="Email"/></span><br/>
-                            <span class="wpcf7-form-control-wrap textarea-25"><textarea name="textarea-25" cols="40"
-                                                                                        rows="10"
-                                                                                        class="wpcf7-form-control wpcf7-textarea main__input main__textarea"
-                                                                                        aria-invalid="false"
-                                                                                        placeholder="Сообщение"></textarea></span><br/>
-                            <span class="wpcf7-form-control-wrap upload-file-408"><input type="file" size="40"
-                                                                                         class="wpcf7-form-control wpcf7-drag-n-drop-file d-none"
-                                                                                         aria-invalid="false"
-                                                                                         multiple="multiple"
-                                                                                         data-name="upload-file-408"
-                                                                                         data-type="doc|txt|docx|jpeg|jpg|png|pdf"
-                                                                                         data-limit="5242880"
-                                                                                         data-min="1" data-id="8"
-                                                                                         data-version="free version 1.3.6.3"
-                                                                                         accept=".doc, .txt, .docx, .jpeg, .jpg, .png, .pdf"/></span>
-                        </p>
-                        <div class="form__info">Нажимая на кнопку "Отправить", Вы даете согласие на обработку своих
-                            персональных данных и
-                            согласие с <a href="#policy" data-fancybox="">политикой Конфиденциальности*</a></div>
-                        <p><input type="submit" value="Отправить"
-                                  class="wpcf7-form-control has-spinner wpcf7-submit main__button"/></p>
-                        <div class="wpcf7-response-output" aria-hidden="true"></div>
-                    </form>
+                    {#                    <form action="/#wpcf7-f8-o1" method="post" class="wpcf7-form init" novalidate="novalidate"#}
+                    {#                          data-status="init">#}
+                    {#                        <div style="display: none;">#}
+                    {#                            <input type="hidden" name="_wpcf7" value="8"/>#}
+                    {#                            <input type="hidden" name="_wpcf7_version" value="5.5.6.1"/>#}
+                    {#                            <input type="hidden" name="_wpcf7_locale" value="ru_RU"/>#}
+                    {#                            <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f8-o1"/>#}
+                    {#                            <input type="hidden" name="_wpcf7_container_post" value="0"/>#}
+                    {#                            <input type="hidden" name="_wpcf7_posted_data_hash" value=""/>#}
+                    {#                            <input type="hidden" name="_wpcf7_recaptcha_response" value=""/>#}
+                    {#                        </div>#}
+                    {#                        <h2 class="sectionHeading">Заказать звонок</h2>#}
+                    {#                        <p><span class="wpcf7-form-control-wrap text-399"><input type="text" name="text-399" value=""#}
+                    {#                                                                                 size="40"#}
+                    {#                                                                                 maxlength="40"#}
+                    {#                                                                                 class="wpcf7-form-control wpcf7-text main__input"#}
+                    {#                                                                                 aria-invalid="false"#}
+                    {#                                                                                 placeholder="Имя"/></span></p>#}
+                    {#                        <div class="form__info"><span style="color: #ff2d2d;">Внимание!</span> Оставьте актуальный номер#}
+                    {#                            телефона и мы#}
+                    {#                            перезвоним в течении часа! Пожалуйста, будьте в это время на связи!#}
+                    {#                        </div>#}
+                    {#                        <p><span class="wpcf7-form-control-wrap tel-519"><input type="tel" name="tel-519" value=""#}
+                    {#                                                                                size="40"#}
+                    {#                                                                                class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel main__input input__phone"#}
+                    {#                                                                                aria-required="true"#}
+                    {#                                                                                aria-invalid="false"#}
+                    {#                                                                                placeholder="+7 ( ) - -"/></span><br/>#}
+                    {#                            <span class="wpcf7-form-control-wrap email-192"><input type="email" name="email-192"#}
+                    {#                                                                                   value="" size="40"#}
+                    {#                                                                                   class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-email main__input"#}
+                    {#                                                                                   aria-invalid="false"#}
+                    {#                                                                                   placeholder="Email"/></span><br/>#}
+                    {#                            <span class="wpcf7-form-control-wrap textarea-25"><textarea name="textarea-25" cols="40"#}
+                    {#                                                                                        rows="10"#}
+                    {#                                                                                        class="wpcf7-form-control wpcf7-textarea main__input main__textarea"#}
+                    {#                                                                                        aria-invalid="false"#}
+                    {#                                                                                        placeholder="Сообщение"></textarea></span><br/>#}
+                    {#                            <span class="wpcf7-form-control-wrap upload-file-408"><input type="file" size="40"#}
+                    {#                                                                                         class="wpcf7-form-control wpcf7-drag-n-drop-file d-none"#}
+                    {#                                                                                         aria-invalid="false"#}
+                    {#                                                                                         multiple="multiple"#}
+                    {#                                                                                         data-name="upload-file-408"#}
+                    {#                                                                                         data-type="doc|txt|docx|jpeg|jpg|png|pdf"#}
+                    {#                                                                                         data-limit="5242880"#}
+                    {#                                                                                         data-min="1" data-id="8"#}
+                    {#                                                                                         data-version="free version 1.3.6.3"#}
+                    {#                                                                                         accept=".doc, .txt, .docx, .jpeg, .jpg, .png, .pdf"/></span>#}
+                    {#                        </p>#}
+                    {#                        <div class="form__info">Нажимая на кнопку "Отправить", Вы даете согласие на обработку своих#}
+                    {#                            персональных данных и#}
+                    {#                            согласие с <a href="#policy" data-fancybox="">политикой Конфиденциальности*</a></div>#}
+                    {#                        <p><input type="submit" value="Отправить"#}
+                    {#                                  class="wpcf7-form-control has-spinner wpcf7-submit main__button"/></p>#}
+                    {#                        <div class="wpcf7-response-output" aria-hidden="true"></div>#}
+                    {#                    </form>#}
                 </div>
             </div>
         </div>
@@ -519,60 +519,60 @@
                     <div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p>
                         <ul></ul>
                     </div>
-                    <form action="/#wpcf7-f124-o2" method="post" class="wpcf7-form init" novalidate="novalidate"
-                          data-status="init">
-                        <div style="display: none;">
-                            <input type="hidden" name="_wpcf7" value="124"/>
-                            <input type="hidden" name="_wpcf7_version" value="5.5.6.1"/>
-                            <input type="hidden" name="_wpcf7_locale" value="ru_RU"/>
-                            <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f124-o2"/>
-                            <input type="hidden" name="_wpcf7_container_post" value="0"/>
-                            <input type="hidden" name="_wpcf7_posted_data_hash" value=""/>
-                            <input type="hidden" name="_wpcf7_recaptcha_response" value=""/>
-                        </div>
-                        <h2 class="sectionHeading">запросить подбор</h2>
-                        <p><span class="wpcf7-form-control-wrap text-303"><input type="text" name="text-303" value=""
-                                                                                 size="40" maxlength="40"
-                                                                                 class="wpcf7-form-control wpcf7-text main__input"
-                                                                                 aria-invalid="false"
-                                                                                 placeholder="Имя"/></span></p>
-                        <div class="form__info"><span style="color: #ff2d2d;">Внимание!</span> Оставьте актуальный номер
-                            телефона и мы перезвоним в течении часа! Пожалуйста, будьте в это время на связи!
-                        </div>
-                        <p><span class="wpcf7-form-control-wrap tel-689"><input type="tel" name="tel-689" value=""
-                                                                                size="40"
-                                                                                class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel main__input input__phone"
-                                                                                aria-required="true"
-                                                                                aria-invalid="false"
-                                                                                placeholder="+7 ( ) - -"/></span><br/>
-                            <span class="wpcf7-form-control-wrap email-567"><input type="email" name="email-567"
-                                                                                   value="" size="40"
-                                                                                   class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-email main__input"
-                                                                                   aria-invalid="false"
-                                                                                   placeholder="Email"/></span><br/>
-                            <span class="wpcf7-form-control-wrap textarea-292"><textarea name="textarea-292" cols="40"
-                                                                                         rows="10" maxlength="400"
-                                                                                         class="wpcf7-form-control wpcf7-textarea main__input main__textarea"
-                                                                                         aria-invalid="false"
-                                                                                         placeholder="Укажите марку и артикул вашего мотор-редуктора для подбора аналога"></textarea></span><br/>
-                            <span class="wpcf7-form-control-wrap upload-file-190"><input type="file" size="40"
-                                                                                         class="wpcf7-form-control wpcf7-drag-n-drop-file d-none"
-                                                                                         aria-invalid="false"
-                                                                                         multiple="multiple"
-                                                                                         data-name="upload-file-190"
-                                                                                         data-type="doc|txt|docx|jpeg|jpg|png|pdf"
-                                                                                         data-limit="5242880"
-                                                                                         data-min="1" data-id="124"
-                                                                                         data-version="free version 1.3.6.3"
-                                                                                         accept=".doc, .txt, .docx, .jpeg, .jpg, .png, .pdf"/></span>
-                        </p>
-                        <div class="form__info">Нажимая на кнопку "Отправить", Вы даете согласие на обработку своих
-                            персональных данных и согласие с <a href="#policy" data-fancybox="">политикой
-                                Конфиденциальности*</a></div>
-                        <p><input type="submit" value="Отправить"
-                                  class="wpcf7-form-control has-spinner wpcf7-submit main__button"/></p>
-                        <div class="wpcf7-response-output" aria-hidden="true"></div>
-                    </form>
+                    {#                    <form action="/#wpcf7-f124-o2" method="post" class="wpcf7-form init" novalidate="novalidate"#}
+                    {#                          data-status="init">#}
+                    {#                        <div style="display: none;">#}
+                    {#                            <input type="hidden" name="_wpcf7" value="124"/>#}
+                    {#                            <input type="hidden" name="_wpcf7_version" value="5.5.6.1"/>#}
+                    {#                            <input type="hidden" name="_wpcf7_locale" value="ru_RU"/>#}
+                    {#                            <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f124-o2"/>#}
+                    {#                            <input type="hidden" name="_wpcf7_container_post" value="0"/>#}
+                    {#                            <input type="hidden" name="_wpcf7_posted_data_hash" value=""/>#}
+                    {#                            <input type="hidden" name="_wpcf7_recaptcha_response" value=""/>#}
+                    {#                        </div>#}
+                    {#                        <h2 class="sectionHeading">запросить подбор</h2>#}
+                    {#                        <p><span class="wpcf7-form-control-wrap text-303"><input type="text" name="text-303" value=""#}
+                    {#                                                                                 size="40" maxlength="40"#}
+                    {#                                                                                 class="wpcf7-form-control wpcf7-text main__input"#}
+                    {#                                                                                 aria-invalid="false"#}
+                    {#                                                                                 placeholder="Имя"/></span></p>#}
+                    {#                        <div class="form__info"><span style="color: #ff2d2d;">Внимание!</span> Оставьте актуальный номер#}
+                    {#                            телефона и мы перезвоним в течении часа! Пожалуйста, будьте в это время на связи!#}
+                    {#                        </div>#}
+                    {#                        <p><span class="wpcf7-form-control-wrap tel-689"><input type="tel" name="tel-689" value=""#}
+                    {#                                                                                size="40"#}
+                    {#                                                                                class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel main__input input__phone"#}
+                    {#                                                                                aria-required="true"#}
+                    {#                                                                                aria-invalid="false"#}
+                    {#                                                                                placeholder="+7 ( ) - -"/></span><br/>#}
+                    {#                            <span class="wpcf7-form-control-wrap email-567"><input type="email" name="email-567"#}
+                    {#                                                                                   value="" size="40"#}
+                    {#                                                                                   class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-email main__input"#}
+                    {#                                                                                   aria-invalid="false"#}
+                    {#                                                                                   placeholder="Email"/></span><br/>#}
+                    {#                            <span class="wpcf7-form-control-wrap textarea-292"><textarea name="textarea-292" cols="40"#}
+                    {#                                                                                         rows="10" maxlength="400"#}
+                    {#                                                                                         class="wpcf7-form-control wpcf7-textarea main__input main__textarea"#}
+                    {#                                                                                         aria-invalid="false"#}
+                    {#                                                                                         placeholder="Укажите марку и артикул вашего мотор-редуктора для подбора аналога"></textarea></span><br/>#}
+                    {#                            <span class="wpcf7-form-control-wrap upload-file-190"><input type="file" size="40"#}
+                    {#                                                                                         class="wpcf7-form-control wpcf7-drag-n-drop-file d-none"#}
+                    {#                                                                                         aria-invalid="false"#}
+                    {#                                                                                         multiple="multiple"#}
+                    {#                                                                                         data-name="upload-file-190"#}
+                    {#                                                                                         data-type="doc|txt|docx|jpeg|jpg|png|pdf"#}
+                    {#                                                                                         data-limit="5242880"#}
+                    {#                                                                                         data-min="1" data-id="124"#}
+                    {#                                                                                         data-version="free version 1.3.6.3"#}
+                    {#                                                                                         accept=".doc, .txt, .docx, .jpeg, .jpg, .png, .pdf"/></span>#}
+                    {#                        </p>#}
+                    {#                        <div class="form__info">Нажимая на кнопку "Отправить", Вы даете согласие на обработку своих#}
+                    {#                            персональных данных и согласие с <a href="#policy" data-fancybox="">политикой#}
+                    {#                                Конфиденциальности*</a></div>#}
+                    {#                        <p><input type="submit" value="Отправить"#}
+                    {#                                  class="wpcf7-form-control has-spinner wpcf7-submit main__button"/></p>#}
+                    {#                        <div class="wpcf7-response-output" aria-hidden="true"></div>#}
+                    {#                    </form>#}
                 </div>
             </div>
         </div>
@@ -584,60 +584,60 @@
                     <div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p>
                         <ul></ul>
                     </div>
-                    <form action="/#wpcf7-f127-o3" method="post" class="wpcf7-form init" novalidate="novalidate"
-                          data-status="init">
-                        <div style="display: none;">
-                            <input type="hidden" name="_wpcf7" value="127"/>
-                            <input type="hidden" name="_wpcf7_version" value="5.5.6.1"/>
-                            <input type="hidden" name="_wpcf7_locale" value="ru_RU"/>
-                            <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f127-o3"/>
-                            <input type="hidden" name="_wpcf7_container_post" value="0"/>
-                            <input type="hidden" name="_wpcf7_posted_data_hash" value=""/>
-                            <input type="hidden" name="_wpcf7_recaptcha_response" value=""/>
-                        </div>
-                        <h2 class="sectionHeading">Свяжитесь с нами</h2>
-                        <p><span class="wpcf7-form-control-wrap text-824"><input type="text" name="text-824" value=""
-                                                                                 size="40" maxlength="40"
-                                                                                 class="wpcf7-form-control wpcf7-text main__input"
-                                                                                 aria-invalid="false"
-                                                                                 placeholder="Имя"/></span></p>
-                        <div class="form__info"><span style="color: #ff2d2d;">Внимание!</span> Оставьте актуальный номер
-                            телефона и мы перезвоним в течении часа! Пожалуйста, будьте в это время на связи!
-                        </div>
-                        <p><span class="wpcf7-form-control-wrap tel-316"><input type="tel" name="tel-316" value=""
-                                                                                size="40"
-                                                                                class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel main__input input__phone"
-                                                                                aria-required="true"
-                                                                                aria-invalid="false"
-                                                                                placeholder="+7 ( ) - -"/></span><br/>
-                            <span class="wpcf7-form-control-wrap email-504"><input type="email" name="email-504"
-                                                                                   value="" size="40"
-                                                                                   class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-email main__input"
-                                                                                   aria-invalid="false"
-                                                                                   placeholder="Email"/></span><br/>
-                            <span class="wpcf7-form-control-wrap textarea-864"><textarea name="textarea-864" cols="40"
-                                                                                         rows="10"
-                                                                                         class="wpcf7-form-control wpcf7-textarea main__input main__textarea"
-                                                                                         aria-invalid="false"
-                                                                                         placeholder="Сообщение"></textarea></span><br/>
-                            <span class="wpcf7-form-control-wrap upload-file-48"><input type="file" size="40"
-                                                                                        class="wpcf7-form-control wpcf7-drag-n-drop-file d-none"
-                                                                                        aria-invalid="false"
-                                                                                        multiple="multiple"
-                                                                                        data-name="upload-file-48"
-                                                                                        data-type="doc|txt|docx|jpeg|jpg|png|pdf"
-                                                                                        data-limit="5242880"
-                                                                                        data-min="1" data-id="127"
-                                                                                        data-version="free version 1.3.6.3"
-                                                                                        accept=".doc, .txt, .docx, .jpeg, .jpg, .png, .pdf"/></span>
-                        </p>
-                        <div class="form__info">Нажимая на кнопку "Отправить", Вы даете согласие на обработку своих
-                            персональных данных и согласие с <a href="#policy" data-fancybox="">политикой
-                                Конфиденциальности*</a></div>
-                        <p><input type="submit" value="Отправить"
-                                  class="wpcf7-form-control has-spinner wpcf7-submit main__button"/></p>
-                        <div class="wpcf7-response-output" aria-hidden="true"></div>
-                    </form>
+                    {#                    <form action="/#wpcf7-f127-o3" method="post" class="wpcf7-form init" novalidate="novalidate"#}
+                    {#                          data-status="init">#}
+                    {#                        <div style="display: none;">#}
+                    {#                            <input type="hidden" name="_wpcf7" value="127"/>#}
+                    {#                            <input type="hidden" name="_wpcf7_version" value="5.5.6.1"/>#}
+                    {#                            <input type="hidden" name="_wpcf7_locale" value="ru_RU"/>#}
+                    {#                            <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f127-o3"/>#}
+                    {#                            <input type="hidden" name="_wpcf7_container_post" value="0"/>#}
+                    {#                            <input type="hidden" name="_wpcf7_posted_data_hash" value=""/>#}
+                    {#                            <input type="hidden" name="_wpcf7_recaptcha_response" value=""/>#}
+                    {#                        </div>#}
+                    {#                        <h2 class="sectionHeading">Свяжитесь с нами</h2>#}
+                    {#                        <p><span class="wpcf7-form-control-wrap text-824"><input type="text" name="text-824" value=""#}
+                    {#                                                                                 size="40" maxlength="40"#}
+                    {#                                                                                 class="wpcf7-form-control wpcf7-text main__input"#}
+                    {#                                                                                 aria-invalid="false"#}
+                    {#                                                                                 placeholder="Имя"/></span></p>#}
+                    {#                        <div class="form__info"><span style="color: #ff2d2d;">Внимание!</span> Оставьте актуальный номер#}
+                    {#                            телефона и мы перезвоним в течении часа! Пожалуйста, будьте в это время на связи!#}
+                    {#                        </div>#}
+                    {#                        <p><span class="wpcf7-form-control-wrap tel-316"><input type="tel" name="tel-316" value=""#}
+                    {#                                                                                size="40"#}
+                    {#                                                                                class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel main__input input__phone"#}
+                    {#                                                                                aria-required="true"#}
+                    {#                                                                                aria-invalid="false"#}
+                    {#                                                                                placeholder="+7 ( ) - -"/></span><br/>#}
+                    {#                            <span class="wpcf7-form-control-wrap email-504"><input type="email" name="email-504"#}
+                    {#                                                                                   value="" size="40"#}
+                    {#                                                                                   class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-email main__input"#}
+                    {#                                                                                   aria-invalid="false"#}
+                    {#                                                                                   placeholder="Email"/></span><br/>#}
+                    {#                            <span class="wpcf7-form-control-wrap textarea-864"><textarea name="textarea-864" cols="40"#}
+                    {#                                                                                         rows="10"#}
+                    {#                                                                                         class="wpcf7-form-control wpcf7-textarea main__input main__textarea"#}
+                    {#                                                                                         aria-invalid="false"#}
+                    {#                                                                                         placeholder="Сообщение"></textarea></span><br/>#}
+                    {#                            <span class="wpcf7-form-control-wrap upload-file-48"><input type="file" size="40"#}
+                    {#                                                                                        class="wpcf7-form-control wpcf7-drag-n-drop-file d-none"#}
+                    {#                                                                                        aria-invalid="false"#}
+                    {#                                                                                        multiple="multiple"#}
+                    {#                                                                                        data-name="upload-file-48"#}
+                    {#                                                                                        data-type="doc|txt|docx|jpeg|jpg|png|pdf"#}
+                    {#                                                                                        data-limit="5242880"#}
+                    {#                                                                                        data-min="1" data-id="127"#}
+                    {#                                                                                        data-version="free version 1.3.6.3"#}
+                    {#                                                                                        accept=".doc, .txt, .docx, .jpeg, .jpg, .png, .pdf"/></span>#}
+                    {#                        </p>#}
+                    {#                        <div class="form__info">Нажимая на кнопку "Отправить", Вы даете согласие на обработку своих#}
+                    {#                            персональных данных и согласие с <a href="#policy" data-fancybox="">политикой#}
+                    {#                                Конфиденциальности*</a></div>#}
+                    {#                        <p><input type="submit" value="Отправить"#}
+                    {#                                  class="wpcf7-form-control has-spinner wpcf7-submit main__button"/></p>#}
+                    {#                        <div class="wpcf7-response-output" aria-hidden="true"></div>#}
+                    {#                    </form>#}
                 </div>
             </div>
         </div>
@@ -649,60 +649,60 @@
                     <div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p>
                         <ul></ul>
                     </div>
-                    <form action="/#wpcf7-f129-o4" method="post" class="wpcf7-form init" novalidate="novalidate"
-                          data-status="init">
-                        <div style="display: none;">
-                            <input type="hidden" name="_wpcf7" value="129"/>
-                            <input type="hidden" name="_wpcf7_version" value="5.5.6.1"/>
-                            <input type="hidden" name="_wpcf7_locale" value="ru_RU"/>
-                            <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f129-o4"/>
-                            <input type="hidden" name="_wpcf7_container_post" value="0"/>
-                            <input type="hidden" name="_wpcf7_posted_data_hash" value=""/>
-                            <input type="hidden" name="_wpcf7_recaptcha_response" value=""/>
-                        </div>
-                        <h2 class="sectionHeading">Узнать подробнее про <span></span></h2>
-                        <p><span class="wpcf7-form-control-wrap text-224"><input type="text" name="text-224" value=""
-                                                                                 size="40" maxlength="40"
-                                                                                 class="wpcf7-form-control wpcf7-text main__input"
-                                                                                 aria-invalid="false"
-                                                                                 placeholder="Имя"/></span></p>
-                        <div class="form__info"><span style="color: #ff2d2d;">Внимание!</span> Оставьте актуальный номер
-                            телефона и мы перезвоним в течении часа! Пожалуйста, будьте в это время на связи!
-                        </div>
-                        <p><span class="wpcf7-form-control-wrap tel-450"><input type="tel" name="tel-450" value=""
-                                                                                size="40"
-                                                                                class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel main__input input__phone"
-                                                                                aria-required="true"
-                                                                                aria-invalid="false"
-                                                                                placeholder="+7 ( ) - -"/></span><br/>
-                            <span class="wpcf7-form-control-wrap email-669"><input type="email" name="email-669"
-                                                                                   value="" size="40"
-                                                                                   class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-email main__input"
-                                                                                   aria-invalid="false"
-                                                                                   placeholder="Email"/></span><br/>
-                            <span class="wpcf7-form-control-wrap textarea-846"><textarea name="textarea-846" cols="40"
-                                                                                         rows="10"
-                                                                                         class="wpcf7-form-control wpcf7-textarea main__input main__textarea"
-                                                                                         aria-invalid="false"
-                                                                                         placeholder="Сообщение"></textarea></span><br/>
-                            <span class="wpcf7-form-control-wrap upload-file-99"><input type="file" size="40"
-                                                                                        class="wpcf7-form-control wpcf7-drag-n-drop-file d-none"
-                                                                                        aria-invalid="false"
-                                                                                        multiple="multiple"
-                                                                                        data-name="upload-file-99"
-                                                                                        data-type="doc|txt|docx|jpeg|jpg|png|pdf"
-                                                                                        data-limit="5242880"
-                                                                                        data-min="1" data-id="129"
-                                                                                        data-version="free version 1.3.6.3"
-                                                                                        accept=".doc, .txt, .docx, .jpeg, .jpg, .png, .pdf"/></span>
-                        </p>
-                        <div class="form__info">Нажимая на кнопку "Отправить", Вы даете согласие на обработку своих
-                            персональных данных и согласие с <a href="#policy" data-fancybox="">политикой
-                                Конфиденциальности*</a></div>
-                        <p><input type="submit" value="Отправить"
-                                  class="wpcf7-form-control has-spinner wpcf7-submit main__button"/></p>
-                        <div class="wpcf7-response-output" aria-hidden="true"></div>
-                    </form>
+                    {#                    <form action="/#wpcf7-f129-o4" method="post" class="wpcf7-form init" novalidate="novalidate"#}
+                    {#                          data-status="init">#}
+                    {#                        <div style="display: none;">#}
+                    {#                            <input type="hidden" name="_wpcf7" value="129"/>#}
+                    {#                            <input type="hidden" name="_wpcf7_version" value="5.5.6.1"/>#}
+                    {#                            <input type="hidden" name="_wpcf7_locale" value="ru_RU"/>#}
+                    {#                            <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f129-o4"/>#}
+                    {#                            <input type="hidden" name="_wpcf7_container_post" value="0"/>#}
+                    {#                            <input type="hidden" name="_wpcf7_posted_data_hash" value=""/>#}
+                    {#                            <input type="hidden" name="_wpcf7_recaptcha_response" value=""/>#}
+                    {#                        </div>#}
+                    {#                        <h2 class="sectionHeading">Узнать подробнее про <span></span></h2>#}
+                    {#                        <p><span class="wpcf7-form-control-wrap text-224"><input type="text" name="text-224" value=""#}
+                    {#                                                                                 size="40" maxlength="40"#}
+                    {#                                                                                 class="wpcf7-form-control wpcf7-text main__input"#}
+                    {#                                                                                 aria-invalid="false"#}
+                    {#                                                                                 placeholder="Имя"/></span></p>#}
+                    {#                        <div class="form__info"><span style="color: #ff2d2d;">Внимание!</span> Оставьте актуальный номер#}
+                    {#                            телефона и мы перезвоним в течении часа! Пожалуйста, будьте в это время на связи!#}
+                    {#                        </div>#}
+                    {#                        <p><span class="wpcf7-form-control-wrap tel-450"><input type="tel" name="tel-450" value=""#}
+                    {#                                                                                size="40"#}
+                    {#                                                                                class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel main__input input__phone"#}
+                    {#                                                                                aria-required="true"#}
+                    {#                                                                                aria-invalid="false"#}
+                    {#                                                                                placeholder="+7 ( ) - -"/></span><br/>#}
+                    {#                            <span class="wpcf7-form-control-wrap email-669"><input type="email" name="email-669"#}
+                    {#                                                                                   value="" size="40"#}
+                    {#                                                                                   class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-email main__input"#}
+                    {#                                                                                   aria-invalid="false"#}
+                    {#                                                                                   placeholder="Email"/></span><br/>#}
+                    {#                            <span class="wpcf7-form-control-wrap textarea-846"><textarea name="textarea-846" cols="40"#}
+                    {#                                                                                         rows="10"#}
+                    {#                                                                                         class="wpcf7-form-control wpcf7-textarea main__input main__textarea"#}
+                    {#                                                                                         aria-invalid="false"#}
+                    {#                                                                                         placeholder="Сообщение"></textarea></span><br/>#}
+                    {#                            <span class="wpcf7-form-control-wrap upload-file-99"><input type="file" size="40"#}
+                    {#                                                                                        class="wpcf7-form-control wpcf7-drag-n-drop-file d-none"#}
+                    {#                                                                                        aria-invalid="false"#}
+                    {#                                                                                        multiple="multiple"#}
+                    {#                                                                                        data-name="upload-file-99"#}
+                    {#                                                                                        data-type="doc|txt|docx|jpeg|jpg|png|pdf"#}
+                    {#                                                                                        data-limit="5242880"#}
+                    {#                                                                                        data-min="1" data-id="129"#}
+                    {#                                                                                        data-version="free version 1.3.6.3"#}
+                    {#                                                                                        accept=".doc, .txt, .docx, .jpeg, .jpg, .png, .pdf"/></span>#}
+                    {#                        </p>#}
+                    {#                        <div class="form__info">Нажимая на кнопку "Отправить", Вы даете согласие на обработку своих#}
+                    {#                            персональных данных и согласие с <a href="#policy" data-fancybox="">политикой#}
+                    {#                                Конфиденциальности*</a></div>#}
+                    {#                        <p><input type="submit" value="Отправить"#}
+                    {#                                  class="wpcf7-form-control has-spinner wpcf7-submit main__button"/></p>#}
+                    {#                        <div class="wpcf7-response-output" aria-hidden="true"></div>#}
+                    {#                    </form>#}
                 </div>
             </div>
         </div>
@@ -710,16 +710,18 @@
 </header>
 
 
-<section class="infoBlock">
+<section class="infoBlock"><h1 class="slogan bigSlogan">ПРИГЛАШАЕМ НОВЫХ ДИЛЕРОВ!</h1>
     <div class="infoBlock__inner">
-        <div class="infoBlock__left kartinka">
+        <div class="infoBlock__left kartinka bigSlogan">
 
             <img src="{% static 'media/1.jpg' %}" class="image" alt="" data-lazy-src="{% static 'media/1.jpg' %}">
             <noscript><img src="https://fish-gearbox.ru/wp-content/uploads/2021/06/infoBlock.png" alt=""></noscript>
         </div>
-        <div class="infoBlock__right">
 
-            <h1 class="slogan">ПРИГЛАШАЕМ НОВЫХ ДИЛЕРОВ</h1>
+
+        <div class="infoBlock__right bigSlogan">
+
+
             <div class="infoBlock__list">
                 <div class="infoBlock__list__item">
                     <div class="infoBlock__list__item__iconWrapper">
@@ -731,46 +733,153 @@
                         компонентов для небольших и средних производителей оборудования
                     </div>
                 </div>
-                <div class="infoBlock__list__item">
-                    <div class="infoBlock__list__item__iconWrapper">
-                        <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E"
-                             alt="" data-lazy-src="{% static 'media/cogs.svg' %}">
-                        <noscript><img src="{% static 'media/cogs.svg' %}" alt=""></noscript>
-                    </div>
-                    <div class="infoBlock__list__item__text">
-                        Наша специализация: ПРИВОДЫ, ДАТЧИКИ, АВТОМАТИКА
-                    </div>
-                </div>
-                <div class="infoBlock__list__item">
-                    <div class="infoBlock__list__item__iconWrapper">
-                        <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E"
-                             alt="" data-lazy-src="{% static 'media/team2.svg' %}">
-                        <noscript><img src="{% static 'media/team2.svg' %}" alt=""></noscript>
-                    </div>
-                    <div class="infoBlock__list__item__text">
-                        ПРОМСИТЕХ расширяется через развитие дилерской сети. 150 торговых партнеров в 2022 году
-                    </div>
-                </div>
+                {#                <div class="infoBlock__list__item">#}
+                {#                    <div class="infoBlock__list__item__iconWrapper">#}
+                {#                        <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E"#}
+                {#                             alt="" data-lazy-src="{% static 'media/cogs.svg' %}">#}
+                {#                        <noscript><img src="{% static 'media/cogs.svg' %}" alt=""></noscript>#}
+                {#                    </div>#}
+                {#                    <div class="infoBlock__list__item__text">#}
+                {#                        Наша специализация: ПРИВОДЫ, ДАТЧИКИ, АВТОМАТИКА#}
+                {#                    </div>#}
+                {#                </div>#}
+                {#                <div class="infoBlock__list__item">#}
+                {#                    <div class="infoBlock__list__item__iconWrapper">#}
+                {#                        <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E"#}
+                {#                             alt="" data-lazy-src="{% static 'media/team2.svg' %}">#}
+                {#                        <noscript><img src="{% static 'media/team2.svg' %}" alt=""></noscript>#}
+                {#                    </div>#}
+                {#                    <div class="infoBlock__list__item__text">#}
+                {#                        ПРОМСИТЕХ расширяется через развитие дилерской сети. 150 торговых партнеров в 2022 году#}
+                {#                    </div>#}
+                {#                </div>#}
             </div>
 
 
         </div>
     </div>
-    <div class="examples__bottom">
-        <div class="examples__bottom__inner">
-            <div class="textBlock">
-                <p>ОПРОСНЫЙ ЛИСТ
-                </p>
-            </div>
-            <p><a class="orderButton" href="https://vld.prst.ru/" target="_blank" rel="noopener"><span>Заполнить</span></a>
-            </p>
-        </div>
-    </div>
+    {#    <div class="examples__bottom">#}
+    {#        <div class="examples__bottom__inner">#}
+    {#            <div class="textBlock">#}
+    {#                <p>ОПРОСНЫЙ ЛИСТ#}
+    {#                </p>#}
+    {#            </div>#}
+    {#            <p><a class="orderButton" href="https://vld.prst.ru/" target="_blank" rel="noopener"><span>Заполнить</span></a>#}
+    {#            </p>#}
+    {#        </div>#}
+    {#    </div>#}
 </section>
+
+<section class="partnership">
+    <div class="partnership__inner">
+        <h2 class="sectionHeading">СТАВ <span>ДИЛЕРОМ</span> ПРОМСИТЕХ ВЫ ПОЛУЧИТЕ:</h2>
+        <div class="partnership__wrapper">
+
+            <div class="part_list">
+                <div class="item">
+                    <div class="ico_wrap">
+                         <img src="{% static 'media/warehouse.svg' %}" alt=""/>
+                    </div>
+                    <div class="text">
+                        Склад 2500 м2, бесперебойное пополнение склада
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="ico_wrap">
+
+                          <img src="{% static 'media/circle.svg' %}" alt=""/>
+                    </div>
+                    <div class="text">
+                        Дилерские скидки до 40%
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="ico_wrap">
+                        <img src="{% static 'media/customer-support.svg' %}" alt=""/>
+                    </div>
+                    <div class="text" >
+                        Обучение продукции и продажам
+{#                        <i class="fi fi-rr-interrogation"></i>#}
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="ico_wrap">
+                        <img src="{% static 'media/shield.svg' %}" alt=""/>
+                    </div>
+                    <div class="text" >
+                        Защита проектов
+{#                        <i class="fi fi-rr-interrogation"></i>#}
+                    </div>
+                </div>   <div class="item">
+                    <div class="ico_wrap">
+                        <img src="{% static 'media/check.svg' %}" alt=""/>
+                    </div>
+                    <div class="text" >
+                       Передача клиентов
+{#                        <i class="fi fi-rr-interrogation"></i>#}
+                    </div>
+                </div>   <div class="item">
+                    <div class="ico_wrap">
+                        <img src="{% static 'media/deal.svg' %}" alt=""/>
+                    </div>
+                    <div class="text" >
+                        Новые связи внутри сообщества дилеров
+{#                        <i class="fi fi-rr-interrogation"></i>#}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+          <div class="partnership__bottom__center">
+                <a href="{% url 'form' %}">  <input type="submit" value="Оставить заявку на дилерство"
+                                                    class="wpcf7-form-control has-spinner wpcf7-submit main__button zayava"/></a>
+            </div>
+
+    </div>
+{#    <div class="partnership__bottom ab_bt">#}
+{#        <div class="partnership__bottom__inner">#}
+{#            <div class="partnership__bottom__left">#}
+{#                <div class="textBlock">#}
+{#                    ДРУГИЕ ПРЕИМУЩЕСТВА ДИЛЕРСТВА ПРОМСИТЕХ: <br><br>#}
+{#                    <ul class="class_ul2">#}
+{#                        <li>#}
+{#                            <div class="li_check"><i class="fi fi-rr-check"></i></div>#}
+{#                            <span>	Контроль отпускных цен на рынке, защита маржинальности</span></li>#}
+{#                        <li>#}
+{#                            <div class="li_check"><i class="fi fi-rr-check"></i></div>#}
+{#                            <span>	Защита проекта. Кто внедрил, тот и должен поставлять.</span></li>#}
+{#                    </ul>#}
+{##}
+{##}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="partnership__bottom__right">#}
+{#                <div class="textBlock">#}
+{##}
+{#                    <ul class="class_ul2">#}
+{#                        <li>#}
+{#                            <div class="li_check"><i class="fi fi-rr-check"></i></div>#}
+{#                            <span>	Обучение по продукции менеджеров дилеров, обучение руководителей дилеров</span>#}
+{#                        </li>#}
+{#                        <li>#}
+{#                            <div class="li_check"><i class="fi fi-rr-check"></i></div>#}
+{#                            <span>	Спеццены. Увеличенные скидки, что бы вынедрить конкурентный бренд.</span></li>#}
+{#                        <li>#}
+{#                            <div class="li_check"><i class="fi fi-rr-check"></i></div>#}
+{#                            <span>	Разрешение коммерческих споров между дилерами</span></li>#}
+{#                    </ul>#}
+{##}
+{#                </div>#}
+{#            </div>#}
+{##}
+{#        </div>#}
+{#    </div>#}
+</section>
+
 
 <section class="examples">
     <div class="examples__inner prod_block">
-        <h2 class="sectionHeading" style="color: white"><span>ПО КАКИМ</span> <br>ГРУППАМ ПРОДУКЦИИ МЫ ПРИГЛАШАЕМ
+        <h2 class="sectionHeading" ><span>ПО КАКИМ</span> <br>ГРУППАМ ПРОДУКЦИИ МЫ ПРИГЛАШАЕМ
             ДИЛЕРОВ:</h2>
         <div class="examples__wrapper">
             <div class="examples__item">
@@ -835,19 +944,19 @@
                     подробнее <i class="fi fi-rr-arrow-right"></i></a>
             </div>
             <!--<div class="examples__item">-->
-                <!--<div class="examples__item__imageWrapper">-->
-                    <!--<div class="image_box">-->
-                        <!--<img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E"-->
-                             <!--alt="" data-lazy-src="https://fish-gearbox.ru/wp-content/uploads/2021/06/examples_1.png">-->
-                        <!--<noscript><img src="https://fish-gearbox.ru/wp-content/uploads/2021/06/examples_1.png" alt="">-->
-                        <!--</noscript>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<div class="examples__item__mark"></div>-->
-                <!--<div class="examples__item__title">Мотор-редукторы INNOVARI <br> (торговая марка компании ПРОМСИТЕХ)-->
-                <!--</div>-->
-                <!--<a href="https://www.prst.ru/reduktor/chervyachnye-reduktory/" class="examples__item__more"-->
-                   <!--target="_blank">Узнать подробнее <i class="fi fi-rr-arrow-right"></i></a>-->
+            <!--<div class="examples__item__imageWrapper">-->
+            <!--<div class="image_box">-->
+            <!--<img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E"-->
+            <!--alt="" data-lazy-src="https://fish-gearbox.ru/wp-content/uploads/2021/06/examples_1.png">-->
+            <!--<noscript><img src="https://fish-gearbox.ru/wp-content/uploads/2021/06/examples_1.png" alt="">-->
+            <!--</noscript>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--<div class="examples__item__mark"></div>-->
+            <!--<div class="examples__item__title">Мотор-редукторы INNOVARI <br> (торговая марка компании ПРОМСИТЕХ)-->
+            <!--</div>-->
+            <!--<a href="https://www.prst.ru/reduktor/chervyachnye-reduktory/" class="examples__item__more"-->
+            <!--target="_blank">Узнать подробнее <i class="fi fi-rr-arrow-right"></i></a>-->
             <!--</div>-->
 
         </div>
@@ -864,41 +973,41 @@
             ---->
     </div>
 </section>
-<section class="about">
-    <div class="about__inner">
-        <div class="about__left">
-            <h2 class="sectionHeading"><span>КАКИЕ </span><br>КОМПАНИИ СТАНОВЯТСЯ ТОРГОВЫМИ ПАРТНЕРАМИ ПРОМСИТЕХ?</h2>
-
-            <ul class="class_ul">
-                <li>
-                    <div class="li_check"><i class="fi fi-rr-check"></i></div>
-                    <span> Количество сотрудников: 2-10 человек</span></li>
-
-                <li>
-                    <div class="li_check"><i class="fi fi-rr-check"></i></div>
-                    <span> Годовой оборот: 10 – 200 млн руб в год</span></li>
-
-                <li>
-                    <div class="li_check"><i class="fi fi-rr-check"></i></div>
-                    <span> Количество сотрудников: 2-10 человек</span></li>
-
-                <li>
-                    <div class="li_check"><i class="fi fi-rr-check"></i></div>
-                    <span> Годовой оборот: 10 – 200 млн руб в год</span></li>
-
-                <li>
-                    <div class="li_check"><i class="fi fi-rr-check"></i></div>
-                    <span> Годовой оборот: 10 – 200 млн руб в год</span></li>
-            </ul>
-        </div>
-
-        <div class="about__right">
-            <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E"
-                 alt="" data-lazy-src="https://fish-gearbox.ru/wp-content/uploads/2021/06/about.png">
-            <noscript><img src="https://fish-gearbox.ru/wp-content/uploads/2021/06/about.png" alt=""></noscript>
-        </div>
-    </div>
-</section>
+{#<section class="about">#}
+{#    <div class="about__inner">#}
+{#        <div class="about__left">#}
+{#            <h2 class="sectionHeading"><span>КАКИЕ </span><br>КОМПАНИИ СТАНОВЯТСЯ ТОРГОВЫМИ ПАРТНЕРАМИ ПРОМСИТЕХ?</h2>#}
+{##}
+{#            <ul class="class_ul">#}
+{#                <li>#}
+{#                    <div class="li_check"><i class="fi fi-rr-check"></i></div>#}
+{#                    <span> Количество сотрудников: 2-10 человек</span></li>#}
+{##}
+{#                <li>#}
+{#                    <div class="li_check"><i class="fi fi-rr-check"></i></div>#}
+{#                    <span> Годовой оборот: 10 – 200 млн руб в год</span></li>#}
+{##}
+{#                <li>#}
+{#                    <div class="li_check"><i class="fi fi-rr-check"></i></div>#}
+{#                    <span> Количество сотрудников: 2-10 человек</span></li>#}
+{##}
+{#                <li>#}
+{#                    <div class="li_check"><i class="fi fi-rr-check"></i></div>#}
+{#                    <span> Годовой оборот: 10 – 200 млн руб в год</span></li>#}
+{##}
+{#                <li>#}
+{#                    <div class="li_check"><i class="fi fi-rr-check"></i></div>#}
+{#                    <span> Годовой оборот: 10 – 200 млн руб в год</span></li>#}
+{#            </ul>#}
+{#        </div>#}
+{##}
+{#        <div class="about__right">#}
+{#            <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E"#}
+{#                 alt="" data-lazy-src="https://fish-gearbox.ru/wp-content/uploads/2021/06/about.png">#}
+{#            <noscript><img src="https://fish-gearbox.ru/wp-content/uploads/2021/06/about.png" alt=""></noscript>#}
+{#        </div>#}
+{#    </div>#}
+{#</section>#}
 <!-----
 {#    <section class="age">#}
 {#        <div class="age__inner">#}
@@ -926,133 +1035,133 @@
 {#        </div>#}
 {#    </section>#}
 ----->
-<section class="partnership">
-    <div class="partnership__inner">
-        <h2 class="sectionHeading">СТАВ ТОРГОВЫМ <span>ПАРТНЕРОМ (ДИЛЕРОМ) </span> <br>ПРОМСИТЕХ ВЫ ПОЛУЧИТЕ:</h2>
-        <div class="partnership__wrapper">
-
-            <div class="part_list">
-                <div class="item">
-                    <div class="ico_wrap">
-                        <img src="{% static 'media/circle.svg' %}" alt=""/>
-                    </div>
-                    <div class="text">
-                        ИНДИВИДУАЛЬНЫЕ СКИДКИ
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="ico_wrap">
-                        <img src="{% static 'media/supplies.svg' %}" alt=""/>
-                    </div>
-                    <div class="text">
-                        СТАБИЛЬНЫЕ ПОСТАВКИ ПРОДУКЦИИ 5 СТМ ПРОМСИТЕХ
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="ico_wrap">
-                        <img src="{% static 'media/customer-support.svg' %}" alt=""/>
-                    </div>
-                    <div class="text" id="sup_1">
-                        ПОМОЩЬ В РАЗВИТИИ ВАШЕГО БИЗНЕСА
-                        <i class="fi fi-rr-interrogation"></i>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="ico_wrap">
-                        <img src="{% static 'media/deal.svg' %}" alt=""/>
-                    </div>
-                    <div class="text" id="sup_2">
-                        НОВЫЕ ДЕЛОВЫЕ И ДРУЖЕСКИЕ СВЯЗИ ВНУТРИ СООБЩЕСТВА ПАРТНЕРОВ ПРОМСИТЕХ
-                        <i class="fi fi-rr-interrogation"></i>
-                    </div>
-                </div>
-            </div>
-
-            <!--<table>
-<tr>
-<th>ИНДИВИДУАЛЬНЫЕ СКИДКИ</th>
-<th>СТАБИЛЬНЫЕ ПОСТАВКИ ПРОДУКЦИИ 5 СТМ ПРОМСИТЕХ</th>
-<th>ПОМОЩЬ В РАЗВИТИИ ВАШЕГО БИЗНЕСА</th>
-<th>НОВЫЕ ДЕЛОВЫЕ И ДРУЖЕСКИЕ СВЯЗИ ВНУТРИ СООБЩЕСТВА ПАРТНЕРОВ ПРОМСИТЕХ</th>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td>Техническое и бизнес-обучение Вас и Ваших сотрудников (обучили уже более 170 человек)</td>
-
-<td>Формальные и неформальные оффлайн-мероприятия для участников нашего сообщества</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td>Регулярные онлайн и оффлайн- конференции по разным направлениям бизнеса.</td>
-
-<td>Доступ к закрытым чатам сообщества партнеров ПРОМСИТЕХ</td>
-</tr>
-                <tr>
-<td></td>
-<td></td>
-<td>Участие в совместной работе по сценарному планированию.</td>
-<td></td>
-</tr>
-                <tr>
-<td></td>
-<td></td>
-<td>Привлечение Ваших сотрудников для участия в выставках на стенде ПРОМСИТЕХ</td>
-<td></td>
-</tr>
-</table>-->
-        </div>
-    </div>
-    <div class="partnership__bottom ab_bt">
-        <div class="partnership__bottom__inner">
-            <div class="partnership__bottom__left">
-                <div class="textBlock">
-                    ДРУГИЕ ПРЕИМУЩЕСТВА ДИЛЕРСТВА ПРОМСИТЕХ: <br><br>
-                    <ul class="class_ul2">
-                        <li>
-                            <div class="li_check"><i class="fi fi-rr-check"></i></div>
-                            <span>	Контроль отпускных цен на рынке, защита маржинальности</span></li>
-                        <li>
-                            <div class="li_check"><i class="fi fi-rr-check"></i></div>
-                            <span>	Защита проекта. Кто внедрил, тот и должен поставлять.</span></li>
-                    </ul>
-                    <!-----{#<li><img src="https://innovari-castiron.ru/images/icon_where.png"><span>	Обучение по продукции менеджеров дилеров, обучение руководителей дилеров</span></li>#}
+{#<section class="partnership">#}
+{#    <div class="partnership__inner">#}
+{#        <h2 class="sectionHeading">СТАВ ТОРГОВЫМ <span>ПАРТНЕРОМ (ДИЛЕРОМ) </span> <br>ПРОМСИТЕХ ВЫ ПОЛУЧИТЕ:</h2>#}
+{#        <div class="partnership__wrapper">#}
+{##}
+{#            <div class="part_list">#}
+{#                <div class="item">#}
+{#                    <div class="ico_wrap">#}
+{#                        <img src="{% static 'media/circle.svg' %}" alt=""/>#}
+{#                    </div>#}
+{#                    <div class="text">#}
+{#                        ИНДИВИДУАЛЬНЫЕ СКИДКИ#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="item">#}
+{#                    <div class="ico_wrap">#}
+{#                        <img src="{% static 'media/supplies.svg' %}" alt=""/>#}
+{#                    </div>#}
+{#                    <div class="text">#}
+{#                        СТАБИЛЬНЫЕ ПОСТАВКИ ПРОДУКЦИИ 5 СТМ ПРОМСИТЕХ#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="item">#}
+{#                    <div class="ico_wrap">#}
+{#                        <img src="{% static 'media/customer-support.svg' %}" alt=""/>#}
+{#                    </div>#}
+{#                    <div class="text" id="sup_1">#}
+{#                        ПОМОЩЬ В РАЗВИТИИ ВАШЕГО БИЗНЕСА#}
+{#                        <i class="fi fi-rr-interrogation"></i>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="item">#}
+{#                    <div class="ico_wrap">#}
+{#                        <img src="{% static 'media/deal.svg' %}" alt=""/>#}
+{#                    </div>#}
+{#                    <div class="text" id="sup_2">#}
+{#                        НОВЫЕ ДЕЛОВЫЕ И ДРУЖЕСКИЕ СВЯЗИ ВНУТРИ СООБЩЕСТВА ПАРТНЕРОВ ПРОМСИТЕХ#}
+{#                        <i class="fi fi-rr-interrogation"></i>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{##}
+{#            <!--<table>#}
+{#<tr>#}
+{#<th>ИНДИВИДУАЛЬНЫЕ СКИДКИ</th>#}
+{#<th>СТАБИЛЬНЫЕ ПОСТАВКИ ПРОДУКЦИИ 5 СТМ ПРОМСИТЕХ</th>#}
+{#<th>ПОМОЩЬ В РАЗВИТИИ ВАШЕГО БИЗНЕСА</th>#}
+{#<th>НОВЫЕ ДЕЛОВЫЕ И ДРУЖЕСКИЕ СВЯЗИ ВНУТРИ СООБЩЕСТВА ПАРТНЕРОВ ПРОМСИТЕХ</th>#}
+{#</tr>#}
+{#<tr>#}
+{#<td></td>#}
+{#<td></td>#}
+{#<td>Техническое и бизнес-обучение Вас и Ваших сотрудников (обучили уже более 170 человек)</td>#}
+{##}
+{#<td>Формальные и неформальные оффлайн-мероприятия для участников нашего сообщества</td>#}
+{#</tr>#}
+{#<tr>#}
+{#<td></td>#}
+{#<td></td>#}
+{#<td>Регулярные онлайн и оффлайн- конференции по разным направлениям бизнеса.</td>#}
+{##}
+{#<td>Доступ к закрытым чатам сообщества партнеров ПРОМСИТЕХ</td>#}
+{#</tr>#}
+{#                <tr>#}
+{#<td></td>#}
+{#<td></td>#}
+{#<td>Участие в совместной работе по сценарному планированию.</td>#}
+{#<td></td>#}
+{#</tr>#}
+{#                <tr>#}
+{#<td></td>#}
+{#<td></td>#}
+{#<td>Привлечение Ваших сотрудников для участия в выставках на стенде ПРОМСИТЕХ</td>#}
+{#<td></td>#}
+{#</tr>#}
+{#</table>-->#}
+{#        </div>#}
+{#    </div>#}
+{#    <div class="partnership__bottom ab_bt">#}
+{#        <div class="partnership__bottom__inner">#}
+{#            <div class="partnership__bottom__left">#}
+{#                <div class="textBlock">#}
+{#                    ДРУГИЕ ПРЕИМУЩЕСТВА ДИЛЕРСТВА ПРОМСИТЕХ: <br><br>#}
+{#                    <ul class="class_ul2">#}
+{#                        <li>#}
+{#                            <div class="li_check"><i class="fi fi-rr-check"></i></div>#}
+{#                            <span>	Контроль отпускных цен на рынке, защита маржинальности</span></li>#}
+{#                        <li>#}
+{#                            <div class="li_check"><i class="fi fi-rr-check"></i></div>#}
+{#                            <span>	Защита проекта. Кто внедрил, тот и должен поставлять.</span></li>#}
+{#                    </ul>#}
+{#                    <!-----{#<li><img src="https://innovari-castiron.ru/images/icon_where.png"><span>	Обучение по продукции менеджеров дилеров, обучение руководителей дилеров</span></li>#}
 {#<li><img src="https://innovari-castiron.ru/images/icon_where.png"><span>	Спеццены. Увеличенные скидки, что бы вынедрить конкурентный бренд.</span></li>#}
 {#<li><img src="https://innovari-castiron.ru/images/icon_where.png"><span>	Разрешение коммерческих споров между дилерами</span></li>#}
-
+{##}
 {#6.	Обеспечение автономности работы дилера. Предоставление всей необходимой информации для этого.<br>#}
 {#7.	Технические консультации<br>#}
 {#8.	Создание региональных складов на базе дилера<br>#}
 {#9.	Ребейты при выполнении планов продаж<br>#}
 {#10.	Аттестация на самостоятельную экспертизу<br>#}
-{#11.	Участие в выставках совместно с Промситех.#}----->
-
-                </div>
-            </div>
-            <div class="partnership__bottom__right">
-                <div class="textBlock">
-
-                    <ul class="class_ul2">
-                        <li>
-                            <div class="li_check"><i class="fi fi-rr-check"></i></div>
-                            <span>	Обучение по продукции менеджеров дилеров, обучение руководителей дилеров</span>
-                        </li>
-                        <li>
-                            <div class="li_check"><i class="fi fi-rr-check"></i></div>
-                            <span>	Спеццены. Увеличенные скидки, что бы вынедрить конкурентный бренд.</span></li>
-                        <li>
-                            <div class="li_check"><i class="fi fi-rr-check"></i></div>
-                            <span>	Разрешение коммерческих споров между дилерами</span></li>
-                    </ul>
-
-                </div>
-            </div>
-            <div class="partnership__bottom__right">
-                <input type="submit" value="Оставить заявку на дилерство"
-                       class="wpcf7-form-control has-spinner wpcf7-submit main__button zayava"/>
-            </div>
-</section>
+{#11.	Участие в выставках совместно с Промситех.#}
+{##}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="partnership__bottom__right">#}
+{#                <div class="textBlock">#}
+{##}
+{#                    <ul class="class_ul2">#}
+{#                        <li>#}
+{#                            <div class="li_check"><i class="fi fi-rr-check"></i></div>#}
+{#                            <span>	Обучение по продукции менеджеров дилеров, обучение руководителей дилеров</span>#}
+{#                        </li>#}
+{#                        <li>#}
+{#                            <div class="li_check"><i class="fi fi-rr-check"></i></div>#}
+{#                            <span>	Спеццены. Увеличенные скидки, что бы вынедрить конкурентный бренд.</span></li>#}
+{#                        <li>#}
+{#                            <div class="li_check"><i class="fi fi-rr-check"></i></div>#}
+{#                            <span>	Разрешение коммерческих споров между дилерами</span></li>#}
+{#                    </ul>#}
+{##}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="partnership__bottom__right">#}
+{#                <input type="submit" value="Оставить заявку на дилерство"#}
+{#                       class="wpcf7-form-control has-spinner wpcf7-submit main__button zayava"/>#}
+{#            </div>#}
+{#</section>#}
 
 <section class="infoBlock">
     <div class="infoBlock__inner">
@@ -1229,7 +1338,7 @@
 <footer class="footer">
     <div class="footer__inner">
         <div class="header__left">
-            <a href="{% url 'index'%}" class="logo">Мотор-редукторы со склада<br> во Владивостоке</a>
+            <a href="{% url 'index' %}" class="logo">Мотор-редукторы со склада<br> во Владивостоке</a>
             <div class="header__text">Приводы, Датчики, Автоматика<br></div>
         </div>
         <div class="header__right">
@@ -1570,9 +1679,17 @@ Served from: fish-gearbox.ru @ 2022-06-29 06:00:24 by W3 Total Cache
 -->
 
 <style>
-    .logo{
-            background: url('https://www.prst.ru/images/head_pic/logo.png') no-repeat;background-size: 98%;
+    .logo {
+        background: url('https://www.prst.ru/images/head_pic/logo.png') no-repeat;
+        background-size: 98%;
     }
+
+    h1.bigSlogan {
+        text-align: center;
+        padding-bottom: 0px;
+        font-size: 50px;
+    }
+
     .tol_li li {
         margin-bottom: 10px;
     }
@@ -1580,11 +1697,24 @@ Served from: fish-gearbox.ru @ 2022-06-29 06:00:24 by W3 Total Cache
     .examples, .clients, .partnership, .order {
         background: url(https://innovari-castiron.ru/images/bg_why.png);
     }
-
+.examples{background: none}
     .kartinka {
         left: 100%;
         margin-top: 10%;
 
+    }
+
+    .kartinka.bigSlogan {
+        width: 65%;
+        max-width: 65%;
+        margin-top: 0%;
+
+    }
+
+    .infoBlock__right.bigSlogan {
+        padding-top: 0;
+        width: 35%;
+        max-width: 35%;
     }
 
     .image {
@@ -1831,7 +1961,7 @@ Served from: fish-gearbox.ru @ 2022-06-29 06:00:24 by W3 Total Cache
     .part_list {
         display: grid;
         gap: 30px;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-template-columns: repeat(3, minmax(0, 1fr));
         text-align: center;
         padding-top: 40px;
         width: 100%;
