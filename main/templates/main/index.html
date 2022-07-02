@@ -429,7 +429,7 @@
 <header class="header">
     <div class="header__inner">
         <div class="header__left">
-            <a href="/" class="logo">Приводы<br> Датчики</a>
+            <a href="{% url 'index'%}" class="logo">Приводы<br> Датчики</a>
             <div class="header__text">Приводы, Датчики, Автоматика<br></div>
         </div>
         <div class="header__right">
@@ -1229,7 +1229,7 @@
 <footer class="footer">
     <div class="footer__inner">
         <div class="header__left">
-            <a href="/" class="logo">Мотор-редукторы со склада<br> во Владивостоке</a>
+            <a href="{% url 'index'%}" class="logo">Мотор-редукторы со склада<br> во Владивостоке</a>
             <div class="header__text">Приводы, Датчики, Автоматика<br></div>
         </div>
         <div class="header__right">
@@ -1570,6 +1570,9 @@ Served from: fish-gearbox.ru @ 2022-06-29 06:00:24 by W3 Total Cache
 -->
 
 <style>
+    .logo{
+            background: url('https://www.prst.ru/images/head_pic/logo.png') no-repeat;background-size: 98%;
+    }
     .tol_li li {
         margin-bottom: 10px;
     }
@@ -1887,10 +1890,4 @@ Served from: fish-gearbox.ru @ 2022-06-29 06:00:24 by W3 Total Cache
             font-size: 16px;
         }
     }
-
-    .logo{
-            background: url('https://www.prst.ru/images/head_pic/logo.png') no-repeat;background-size: 98%;
-    }
-
-
 </style>
