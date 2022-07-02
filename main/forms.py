@@ -18,3 +18,7 @@ class ProfileForm(forms.ModelForm):
 #         model = Pro
 
 
+class QuestionareForm(forms.ModelForm):
+    class Meta:
+        model = Questionaire
+        fields = '__all__'
