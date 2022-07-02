@@ -936,8 +936,8 @@
                 <div class="examples__item__imageWrapper">
                     <div class="image_box">
                         <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E"
-                             alt="" data-lazy-src="https://fish-gearbox.ru/wp-content/uploads/2021/06/examples_3-1.png">
-                        <noscript><img src="https://fish-gearbox.ru/wp-content/uploads/2021/06/examples_3-1.png" alt="">
+                             alt="" data-lazy-src="{% static 'media/datchik.JPG' %}">
+                        <noscript><img src="{% static 'media/datchik.JPG' %}" alt="">
                         </noscript>
                     </div>
                 </div>
@@ -1208,14 +1208,16 @@
                 <div class="partnership__inner each_why">
                     <div class="ico_wrap">
                         <img src="{% static 'media/delivery-box.svg' %}" alt=""/>
-                    </div>
-                    <span>много <br/>продуктовых<br/> групп: …</span>
+                    </div>5 собственных <br> торговых марок
+
                 </div>
                 <div class="partnership__inner each_why">
                     <div class="ico_wrap">
                         <img src="{% static 'media/shield.svg' %}" alt=""/>
                     </div>
-                    <span>Марки ПРОМСИТЕХ проверены<br/> временем: более 200000 ПЧ <br> флагмаского бренда INNOVERT <br> уже работает в России<br/><img
+                    <span>более 200000 ПЧ <br>
+флагмаского бренда INNOVERT <br>
+уже работает в России<img
                             class="img_optsii" src="images/optsii.png" alt=""/></span>
                 </div>
                 <div class="partnership__inner each_why">
@@ -1288,21 +1290,31 @@
 {#        </div>#}
 {#    </section>#}
 --->
-<section class="about">
 
-    <div class="examples__bottom">
-        <div class="examples__bottom__inner">
-            <div class="textBlock">
-                <p>ЧТОБЫ ОСТАВИТЬ ЗАЯВКУ НА ПОЛУЧЕНИЕ ДИЛЕРСТВА,
-                    ЗАПОЛНИТЕ ОПРОСНЫЙ ЛИСТ ПОТЕНЦИАЛЬНОГО ПАРТНЕРА
-                </p>
-            </div>
-            <p><a class="orderButton" href="https://vld.prst.ru/" target="_blank" rel="noopener"><span>Заполнить</span></a>
-            </p>
-        </div>
-    </div>
 
-</section>
+<section class="examples">
+    <div class="examples__inner prod_block">
+        <h2 class="sectionHeading" >
+
+            ЕСЛИ У ВАС ОСТАЛИСЬ ВОПРОСЫ, НАПИШИТЕ НАМ НА АДРЕС  <span>PRIVOD5@PRST.RU</span>, УКАЗАВ В ТЕМЕ ПИСЬМА «НОВЫЙ ДИЛЕР»
+
+        </h2>
+    </div></section>
+
+{#<section class="about">#}
+{##}
+{#    <div class="examples__bottom">#}
+{#        <div class="examples__bottom__inner">#}
+{#            <div class="textBlock">#}
+{#                <p>ЕСЛИ У ВАС ОСТАЛИСЬ ВОПРОСЫ, <br> НАПИШИТЕ НАМ НА АДРЕС  PRIVOD5@PRST.RU  , УКАЗАВ В ТЕМЕ ПИСЬМА «НОВЫЙ ДИЛЕР»#}
+{#                </p>#}
+{#            </div>#}
+{#            <p><a class="orderButton" href="https://vld.prst.ru/" target="_blank" rel="noopener"><span>Заполнить</span></a>#}
+{#            </p>#}
+{#        </div>#}
+{#    </div>#}
+{##}
+{#</section>#}
 <!--
 {#    <section class="instagram">#}
 {#        <h2 class="sectionHeading">наш <span>инстаграм :</span></h2>#}
@@ -1342,9 +1354,22 @@
 <footer class="footer">
     <div class="footer__inner">
         <div class="header__left">
-            <a href="{% url 'index' %}" class="logo">Мотор-редукторы со склада<br> во Владивостоке</a>
+            <a href="{% url 'index' %}" class="logo">Промситех</a>
             <div class="header__text">Приводы, Датчики, Автоматика<br></div>
         </div>
+
+
+         <div class="header__right">
+            <div class="header__contacts">
+
+            </div>
+
+            <a href="{% url 'form' %}">
+                <input type="submit" value="Оставить заявку на дилерство"
+                       class="wpcf7-form-control has-spinner wpcf7-submit main__button zayava"/>
+            </a>
+        </div>
+
         <div class="header__right">
             <div class="header__contacts">
 
@@ -2026,16 +2051,21 @@ Served from: fish-gearbox.ru @ 2022-06-29 06:00:24 by W3 Total Cache
         }
     }
 
-
     .examples__item:nth-child(4n+1) {
-    background: none;
-    background-size: cover;
-    color: #005aab;
-}.examples__item:nth-child(4n+1) .examples__item__title {
-    color: #005aab;
-}.examples__item:nth-child(4n+1) .examples__item__more {
-    color: #00519e;
-}.examples__item:nth-child(4n+3) {
-    background-color: #ffffff;
-}
+        background: none;
+        background-size: cover;
+        color: #005aab;
+    }
+
+    .examples__item:nth-child(4n+1) .examples__item__title {
+        color: #005aab;
+    }
+
+    .examples__item:nth-child(4n+1) .examples__item__more {
+        color: #00519e;
+    }
+
+    .examples__item:nth-child(4n+3) {
+        background-color: #ffffff;
+    }
 </style>
