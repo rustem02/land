@@ -23,14 +23,27 @@ def render_table(instans):
 
     return l
 
-
+from django.contrib.auth import login, logout, authenticate
 def svod(request):
 
     qs = Questionaire.objects.all().order_by('id')
 
     context = {'l': []}
 
+    if request.method == 'POST':
+        login_form = LoginForm(request.POST)
+        if login_form.is_valid():
+            user = authenticate(username=request.POST['login'].lower(),
+                                password=request.POST['password'])
+            if not user is None:
+                login(request, user)
 
+
+
+    if not request.user.is_authenticated:
+        context['login_form'] = LoginForm()
+    else:
+        context['has_access'] = True
 
     context['fields'] = qs.model._meta.fields
 

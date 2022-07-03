@@ -1,11 +1,11 @@
-{% load static %}
+{% load static %}{% load recaptcha3 %}
 <!DOCTYPE html>
 <html lang="ru-RU">
 
 <head>
     <title>Промситех</title>
 
-
+   {% recaptcha_init %} {% recaptcha_ready action_name='form' %}
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="keywords" content="">
         <meta name="description" content="Промситех свод заявок">
@@ -448,6 +448,9 @@
 
 <section class="examples">
     <div class="examples__inner prod_block">
+
+      {% if has_access %}
+
         <h2 class="sectionHeading" >
 
           Свод заявок
@@ -473,6 +476,27 @@
            </tbody>
 
             </table>
+
+
+
+    {% else %}
+     <h2 class="sectionHeading" >
+
+          Авторизация
+ </h2>
+
+          <form action="/svod/" method="post">
+
+
+            {% csrf_token %}
+
+          {{ login_form }}
+        <button type="submit">Вход</button>
+
+          </form>
+
+    {% endif %}
+
 </div>
 
 

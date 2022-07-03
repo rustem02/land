@@ -23,3 +23,9 @@ class QuestionareForm(forms.ModelForm):
     class Meta:
         model = Questionaire
         fields = '__all__'
+
+
+class LoginForm(forms.Form):
+    login = forms.CharField()
+    password = forms.CharField(widget=forms.PasswordInput)
+    captcha = ReCaptchaField()
