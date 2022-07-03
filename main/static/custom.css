@@ -344,6 +344,9 @@ h2.slogan::after{
 .part_list .ico_wrap img {
     width: 50px;
 }
+.text-wdth{
+    max-width: 130px!important;
+}
 @media (min-width: 969px) {
     .partnership__inner{
         padding-bottom: 20px;
@@ -356,6 +359,15 @@ h2.slogan::after{
     }
 }
 @media (max-width: 968px) {
+    .part_list{
+        gap: 30px;
+    }
+    .partnership__bottom__center{
+        padding-top: 20px;
+    }
+    .infoBlock__list{
+        padding-top: 0px;
+    }
     h1.bigSlogan span:after {
         display: none;
     }
@@ -368,7 +380,14 @@ h2.slogan::after{
     .infoBlock__right.bigSlogan{
         width: 100%;
         max-width: 100%;
-        margin-top: 20px;
+        margin-top: 5px;
+    }
+    .header .logo{
+        margin: 0px auto;
+    }
+    .header__left{
+        display: block;
+        text-align: center;
     }
     .fav_list{
         padding-top: 0px!important;
@@ -406,6 +425,8 @@ h2.slogan::after{
     .kartinka.bigSlogan{
         width: 100%;
         max-width: 100%;
+        padding-left: 0px;
+        padding-right: 0px;
     }
     .part_list {
         grid-template-columns: repeat(2, minmax(0, 1fr));
