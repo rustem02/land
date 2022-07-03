@@ -29,8 +29,10 @@
     <link rel='dns-prefetch' href='//cdnjs.cloudflare.com'/>
     <link rel='dns-prefetch' href='//www.google.com'/>
     <link rel='dns-prefetch' href='//s.w.org'/>
+    <link rel='dns-prefetch' href='//cdn-uicons.flaticon.com'/>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+
     <script type="text/javascript">
         window._wpemojiSettings = {
             "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/",
@@ -91,7 +93,7 @@
         }
     </style>
     <link rel='stylesheet' id='wp-block-library-css'
-          href='https://fish-gearbox.ru/wp-includes/css/dist/block-library/style.min.css?ver=6.0' type='text/css'
+          href="{% static 'style.min.css' %}?v=1" type='text/css'
           media='all'/>
     <style id='global-styles-inline-css' type='text/css'>
         body {
@@ -342,16 +344,17 @@
         }
     </style>
     <link rel='stylesheet' id='dnd-upload-cf7-css'
-          href='https://fish-gearbox.ru/wp-content/plugins/drag-and-drop-multiple-file-upload-contact-form-7/assets/css/dnd-upload-cf7.css?ver=1.3.6.3'
+          href="{% static 'dnd-upload-cf7.css' %}?v=1"
           type='text/css' media='all'/>
     <link rel='stylesheet' id='contact-form-7-css'
-          href='https://fish-gearbox.ru/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.5.6.1'
+        href="{% static 'style.contact.css' %}?v=1"
           type='text/css' media='all'/>
+
     <link rel='stylesheet' id='main-fancybox-css'
-          href='https://fish-gearbox.ru/wp-content/themes/promisteh_theme/site/css/jquery.fancybox.min.css?ver=6.0'
+          href="{% static 'jquery.fancybox.min.css' %}?v=1"
           type='text/css' media='all'/>
     <link rel='stylesheet' id='main-styles-css'
-          href='https://fish-gearbox.ru/wp-content/themes/promisteh_theme/style.css?ver=6.0' type='text/css'
+            href="{% static 'promisteh_theme.css' %}?v=1" type='text/css'
           media='all'/>
     <script type='text/javascript' src='https://fish-gearbox.ru/wp-includes/js/jquery/jquery.min.js?ver=3.6.0'
             id='jquery-core-js'></script>
@@ -377,18 +380,7 @@
     <script type='text/javascript' src='https://fish-gearbox.ru/wp-content/themes/promisteh_theme/site/js/my.js?ver=6.0'
             id='script-my-js'></script>
     <link rel="https://api.w.org/" href="https://fish-gearbox.ru/wp-json/"/>
-    <link rel="alternate" type="application/json" href="https://fish-gearbox.ru/wp-json/wp/v2/pages/10"/>
-    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://fish-gearbox.ru/xmlrpc.php?rsd"/>
-    <link rel="wlwmanifest" type="application/wlwmanifest+xml"
-          href="https://fish-gearbox.ru/wp-includes/wlwmanifest.xml"/>
-    <meta name="generator" content="WordPress 6.0"/>
-    <link rel="canonical" href="https://fish-gearbox.ru/"/>
-    <link rel='shortlink' href='https://fish-gearbox.ru/'/>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
-    <link rel="alternate" type="application/json+oembed"
-          href="https://fish-gearbox.ru/wp-json/oembed/1.0/embed?url=https%3A%2F%2Ffish-gearbox.ru%2F"/>
-    <link rel="alternate" type="text/xml+oembed"
-          href="https://fish-gearbox.ru/wp-json/oembed/1.0/embed?url=https%3A%2F%2Ffish-gearbox.ru%2F&#038;format=xml"/>
     <noscript>
         <style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src] {
             display: none !important;
@@ -408,6 +400,8 @@
     {#</script>#}
     {#<noscript><div><img src="https://mc.yandex.ru/watch/85528762" style="position:absolute; left:-9999px;" alt="" /></div></noscript>#}
     <!-- /Yandex.Metrika counter -->
+
+    <link rel='stylesheet' href="{% static 'custom.css' %}">
 
 </head>
 
@@ -778,7 +772,7 @@
             <div class="part_list">
                 <div class="item">
                     <div class="ico_wrap">
-                         <img src="{% static 'media/warehouse.svg' %}" alt=""/>
+                         <img src="{% static 'media/loader.svg' %}" alt=""/>
                     </div>
                     <div class="text">
                        БЕСПЕРЕБОЙНЫЕ ОТГРУЗКИ СО СКЛАДА 2500 М2
@@ -812,7 +806,7 @@
                     </div>
                 </div>   <div class="item">
                     <div class="ico_wrap">
-                        <img src="{% static 'media/check.svg' %}" alt=""/>
+                        <img src="{% static 'media/profile.svg' %}" alt=""/>
                     </div>
                     <div class="text" >
                        Передача клиентов
@@ -884,7 +878,7 @@
         <div class="examples__wrapper">
 
 
-              <div class="examples__item">
+              <a href="https://www.prst.ru/preobrazovatel/" target="_blank" class="examples__item">
                 <div class="examples__item__imageWrapper">
                     <div class="image_box">
                         <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E"
@@ -896,12 +890,12 @@
                 <div class="examples__item__mark"></div>
                 <div class="examples__item__title">Частотные <br> преобразователи
                 </div>
-                <a href="https://www.prst.ru/preobrazovatel/" class="examples__item__more" target="_blank">Узнать
-                    подробнее <i class="fi fi-rr-arrow-right"></i></a>
-            </div>
+                <span class="examples__item__more">Узнать
+                    подробнее <i class="fi fi-rr-arrow-right"></i></span>
+            </a>
 
 
-            <div class="examples__item">
+            <a href="https://www.prst.ru/reduktor/" class="examples__item" target="_blank">
                 <div class="examples__item__imageWrapper">
                     <div class="image_box">
                         <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E"
@@ -913,10 +907,10 @@
                 <div class="examples__item__mark"></div>
                 <div class="examples__item__title">Мотор-редукторы
                 </div>
-                <a href="https://www.prst.ru/reduktor/" class="examples__item__more"
-                   target="_blank">Узнать подробнее <i class="fi fi-rr-arrow-right"></i></a>
-            </div>
-            <div class="examples__item">
+                <span  class="examples__item__more"
+                   target="_blank">Узнать подробнее <i class="fi fi-rr-arrow-right"></i></span>
+            </a>
+            <a href="https://www.prst.ru/innocont/" class="examples__item">
                 <div class="examples__item__imageWrapper">
                     <div class="image_box">
                         <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E"
@@ -929,10 +923,10 @@
                 <div class="examples__item__mark"></div>
                 <div class="examples__item__title">Автоматика
                 </div>
-                <a href="https://www.prst.ru/innocont/" class="examples__item__more" target="_blank">Узнать
-                    подробнее <i class="fi fi-rr-arrow-right"></i></a>
-            </div>
-            <div class="examples__item">
+                <span class="examples__item__more">Узнать
+                    подробнее <i class="fi fi-rr-arrow-right"></i></span>
+            </a>
+            <a href="https://www.prst.ru/encoder/" class="examples__item" target="_blank">
                 <div class="examples__item__imageWrapper">
                     <div class="image_box">
                         <img src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E"
@@ -943,9 +937,9 @@
                 </div>
                 <div class="examples__item__mark"></div>
                 <div class="examples__item__title">Датчики</div>
-                <a href="https://www.prst.ru/encoder/" class="examples__item__more"
-                   target="_blank">Узнать подробнее <i class="fi fi-rr-arrow-right"></i></a>
-            </div>
+                <span class="examples__item__more"
+                   >Узнать подробнее <i class="fi fi-rr-arrow-right"></i></span>
+            </a>
 
             <!--<div class="examples__item">-->
             <!--<div class="examples__item__imageWrapper">-->
@@ -1168,7 +1162,7 @@
 {#            </div>#}
 {#</section>#}
 
-<section class="infoBlock">
+<section class="infoBlock video_block">
     <div class="infoBlock__inner">
 
 
@@ -1208,9 +1202,9 @@
                 </div>
                 <div class="partnership__inner each_why">
                     <div class="ico_wrap">
-                        <img src="{% static 'media/delivery-box.svg' %}" alt=""/>
-                    </div>5 собственных <br> торговых марок
-
+                        <img src="{% static 'media/trademark.svg' %}" alt=""/>
+                    </div>
+                    <span>5 собственных <br> торговых марок</span>
                 </div>
                 <div class="partnership__inner each_why">
                     <div class="ico_wrap">
@@ -1698,366 +1692,3 @@ Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3
 
 Served from: fish-gearbox.ru @ 2022-06-29 06:00:24 by W3 Total Cache
 -->
-
-<style>
-    .logo {
-        background: url('https://www.prst.ru/images/head_pic/logo.png') no-repeat;
-        background-size: 98%;
-    }
-
-    h1.bigSlogan {
-        text-align: center;
-        padding-bottom: 0px;
-        font-size: 50px;
-    }
-
-    .tol_li li {
-        margin-bottom: 10px;
-    }
-
-    .examples, .clients, .partnership, .order {
-        background: url(https://innovari-castiron.ru/images/bg_why.png);
-    }
-.examples{background: none}
-    .kartinka {
-        left: 100%;
-        margin-top: 10%;
-
-    }
-
-    .kartinka.bigSlogan {
-        width: 65%;
-        max-width: 65%;
-        margin-top: 0%;
-
-    }
-
-    .infoBlock__right.bigSlogan {
-        padding-top: 0;
-        width: 35%;
-        max-width: 35%;
-    }
-
-    .image {
-        width: 100%;
-        height: 40%;
-    }
-
-    .zayava {
-        position: relative;
-        left: 50%;
-        transform: translate(-50%, 0);
-    }
-
-    li {
-        list-style-type: none;
-    }
-
-    .class_ul li span {
-        font-size: 14px;
-        text-transform: uppercase;
-        float: left;
-        width: 83%;
-    }
-
-    ul li img {
-        margin-right: 10px;
-        float: left;
-    }
-
-    .class_ul li {
-        list-style-type: none;
-        margin-bottom: 30px;
-        overflow: hidden;
-        display: flex;
-        align-items: baseline;
-    }
-
-    .class_ul1 li {
-        list-style-type: none;
-        margin-bottom: 10px;
-        overflow: hidden;
-    }
-
-    .class_ul2 li {
-        list-style-type: none;
-        margin-bottom: 10px;
-        overflow: hidden;
-    }
-
-    .class_ul2 li span {
-        font-size: 14px;
-        text-transform: uppercase;
-        float: left;
-        width: 80%;
-    }
-
-    .each_why {
-        color: #fff;
-        display: flex;
-        align-items: flex-start;
-        text-transform: uppercase;
-    }
-
-    .all_why {
-        display: inline-block;
-
-        overflow: hidden;
-    }
-
-    a {
-        text-decoration: none;
-    }
-
-    .partnership__inner {
-        padding: 70px 0 40px 0;
-    }
-
-    .zayavka {
-
-    }
-
-    @media (max-width: 660px) {
-        .all_why {
-            position: relative;
-            display: block;
-            overflow: hidden;
-            vertical-align: middle;
-        }
-
-        .partnership__wrapper {
-            position: relative;
-            display: block;
-            overflow: hidden;
-            vertical-align: middle;
-        }
-
-        a {
-            text-decoration: none;
-        }
-
-        table {
-            position: relative;
-            font-size: 10px;
-        }
-    }
-
-    .infoBlock__list__item__text {
-        font-weight: 300;
-        font-size: 19px;
-        text-transform: uppercase;
-        line-height: 30px;
-    }
-
-    .infoBlock__list__item {
-        margin-bottom: 20px;
-    }
-
-    .infoBlock__list__item:last-child {
-        margin-bottom: 0px;
-    }
-
-    .header .header__right input {
-        margin-top: 0px;
-    }
-
-    .prod_block .examples__item__title {
-        font-weight: 300;
-        font-size: 22px;
-        line-height: 22px;
-        text-align: center;
-    }
-
-    .prod_block .examples__item__imageWrapper {
-        padding-bottom: 80%;
-        position: relative;
-        flex-grow: 1;
-        height: initial;
-    }
-
-    .prod_block .examples__item__imageWrapper .image_box {
-        margin: 0;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .prod_block .examples__item__imageWrapper .image_box img {
-        max-width: 100%;
-        height: auto;
-        object-fit: contain;
-        vertical-align: middle;
-        -o-object-fit: contain;
-        transition: opacity .15s ease-in-out;
-        max-height: 100%;
-    }
-
-    .prod_block .examples__item__more {
-        font-size: 10px;
-        text-transform: uppercase;
-        font-weight: 600;
-        background: initial;
-        display: flex;
-        align-items: center;
-    }
-
-    .prod_block .examples__item__more i {
-        color: #fe292a;
-        font-size: 18px;
-        margin-left: 10px;
-        display: flex;
-        align-items: center;
-    }
-
-    .li_check {
-        background: #fe292a;
-        color: #fff;
-        width: 18px;
-        height: 18px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-right: 10px;
-    }
-
-    .li_check i {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 10px;
-    }
-
-    .fav_list {
-        padding-top: 0px;
-        display: grid;
-        gap: 40px;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        width: 100%;
-    }
-
-    .fav_list .ico_wrap {
-        margin-right: 30px;
-    }
-
-    .fav_list .ico_wrap img {
-        max-width: 40px;
-        width: 40px;
-    }
-
-    .fav_list .each_why {
-        line-height: 26px;
-    }
-
-    .footer__copy {
-        font-size: 13px;
-    }
-
-    .footer__copy p {
-        padding-bottom: 5px;
-    }
-
-    .footer__copy p:last-child {
-        padding-bottom: 0px;
-    }
-
-    .ab_bt {
-        padding-top: 40px;
-    }
-
-    .ab_bt .class_ul2 li {
-        display: flex;
-        align-items: baseline;
-    }
-
-    .examples__item {
-        margin-bottom: 10px;
-    }
-
-    .part_list {
-        display: grid;
-        gap: 30px;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        text-align: center;
-        padding-top: 40px;
-        width: 100%;
-    }
-
-    .part_list .text {
-        text-transform: uppercase;
-        font-weight: 300;
-        font-size: 16px;
-        max-width: 200px;
-        margin: 0 auto;
-        line-height: 24px;
-    }
-
-    .part_list .text i {
-        font-size: 15px;
-        color: #fe292a;
-        margin-left: 5px;
-    }
-
-    .part_list .ico_wrap {
-        margin-bottom: 20px;
-    }
-
-    .part_list .ico_wrap img {
-        width: 50px;
-    }
-
-    @media (max-width: 968px) {
-        .part_list {
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
-
-        .examples__item {
-            margin-bottom: 20px;
-        }
-
-        .fav_list {
-            display: block;
-        }
-
-        .fav_list .each_why {
-            width: 100%;
-            float: initial;
-            padding-top: 40px;
-            padding-bottom: 0;
-        }
-
-        .partnership__bottom__right .class_ul2 li {
-            text-align: left;
-        }
-    }
-
-    @media (max-width: 968px) {
-        .infoBlock__list__item__text {
-            font-size: 16px;
-        }
-    }
-
-    .examples__item:nth-child(4n+1) {
-        background: none;
-        background-size: cover;
-        color: #005aab;
-    }
-
-    .examples__item:nth-child(4n+1) .examples__item__title {
-        color: #005aab;
-    }
-
-    .examples__item:nth-child(4n+1) .examples__item__more {
-        color: #00519e;
-    }
-
-    .examples__item:nth-child(4n+3) {
-        background-color: #ffffff;
-    }
-</style>
