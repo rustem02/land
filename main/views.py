@@ -9,11 +9,14 @@ def index(request):
 
 
 def form(request):
+
     if request.method == 'POST':
         fm = QuestionareForm(request.POST)
+
         if fm.is_valid():
             fm.save()
             return render(request, 'main/index.html')
+
     return render(request, 'main/form.html')
 
 

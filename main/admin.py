@@ -4,3 +4,4 @@ from .models import *
 admin.site.register(Profile)
 admin.site.register(Choices)
 admin.site.register(YesNo)
+admin.site.register(Questionaire)
