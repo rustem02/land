@@ -24,6 +24,10 @@ def render_table(instans):
     return l
 
 
+def svod(request):
+    return render(request, 'main/svod.html')
+
+
 def form(request):
     fm = QuestionareForm()
     if request.method == 'POST':
