@@ -35,7 +35,7 @@ def form(request):
             subject, from_email, to = 'Новая заявка на дилерство', 'dealer@prst.ru', 'pribka@mail.ru'
             text_content = 'Новая заявка на дилерство'
             cnt = render_table(fm.instance)
-            html_content = render(request, 'main/formemail.html', context={'cnt': cnt}).content
+            html_content = render(request, 'main/formemail.html', context={'cnt': cnt}).content.decode('utf8')
             email = EmailMultiAlternatives(subject, text_content, from_email, [to], )
             email.attach_alternative(html_content, 'text/html')
             email.send()
@@ -46,7 +46,7 @@ def form(request):
             subject, from_email, to = 'Ошибка в заявке на дилерство', 'dealer@prst.ru', 'pribka@mail.ru'
             text_content = 'Ошибка в заявке на дилерство'
 
-            html_content = render(request, 'main/formemail.html', context={'fm': fm}).content
+            html_content = render(request, 'main/formemail.html', context={'fm': fm}).content.decode('utf8')
             email = EmailMultiAlternatives(subject, text_content, from_email, [to], )
             email.attach_alternative(html_content, 'text/html')
             email.send()
