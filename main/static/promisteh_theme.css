@@ -554,18 +554,28 @@ body {
 }
 .slogan,
 h1 {
-    font-weight: 800;
     color: #005aab;
-    font-size: 34px;
+    font-size: 30px;
     line-height: 1.4;
     padding-bottom: 48px;
     text-transform: uppercase;
 }
+h1 {
+    font-weight: 800;
+}
+.slogan{
+    font-weight: 700;
+}
 @media only screen and (max-width: 1030px) {
     .slogan,
     h1 {
-        font-size: 24px;
         padding-bottom: 20px;
+    }
+    h1 {
+        font-size: 24px;
+    }
+    .slogan{
+        font-size: 20px;
     }
 }
 .orderButton {
