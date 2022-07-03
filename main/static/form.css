@@ -1,0 +1,100 @@
+a {
+    text-decoration: none;
+}
+
+/*
+
+
+{#.order{#}   */
+/*
+
+
+{# background: url('https://innovari-castiron.ru/images/bg_better.png') top right no-repeat #e9eef5;#}   */
+/*
+
+
+{# border-bottom: 3px dotted #dce2eb;#}   */
+/*{
+
+
+#}#}   */
+/*
+
+
+{#.order__inner{#}   */
+/*
+
+
+{# background: url('https://innovari-castiron.ru/images/bg_better.png') top right no-repeat #e9eef5;#}   */
+/*
+
+
+{# border-bottom: 3px dotted #dce2eb;#}   */
+/*{
+
+
+#}#}   */
+.order {
+    background: url('./img/bg_better.png') top right no-repeat #0c428a;
+    background-size: 650px;
+}
+
+.order__form__left {
+    left: 10%
+}
+
+.logo {
+    background: url('https://www.prst.ru/images/head_pic/logo.png') no-repeat;
+    background-size: 98%;
+}
+
+@media screen and (max-width: 1240px) {
+    .order {
+        background: url('https://innovari-castiron.ru/images/bg_better.png') top right no-repeat #0c428a;
+        background-size: 600px;
+    }
+}
+
+@media screen and (max-width: 1110px) {
+    .order {
+        background: url('https://innovari-castiron.ru/images/bg_better.png') top right no-repeat #0c428a;
+        background-size: 560px;
+    }
+}
+
+@media screen and (max-width: 1060px) {
+    .order {
+        background: url('https://innovari-castiron.ru/images/bg_better.png') top right no-repeat #0c428a;
+        background-size: 480px;
+    }
+}
+
+@media screen and (max-width: 944px) {
+    .order {
+        background: url('https://innovari-castiron.ru/images/bg_better.png') top right no-repeat #0c428a;
+        background-size: 450px;
+    }
+}
+
+@media screen and (max-width: 855px) {
+    .order {
+        background: url('https://innovari-castiron.ru/images/bg_better.png') top right no-repeat #0c428a;
+        background-size: 420px;
+        position: center;
+    }
+}
+
+@media screen and (max-width: 810px) {
+    .order {
+        background: url('https://innovari-castiron.ru/images/bg_better.png') top right no-repeat #0c428a;
+        background-size: 350px;
+        position: center;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .order {
+        background: url('https://innovari-castiron.ru/images/bg_why.png');
+        position: center;
+    }
+}
