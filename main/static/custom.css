@@ -9,7 +9,9 @@ h1.bigSlogan {
     font-size: 50px;
     position: relative;
 }
-
+.mail_lnk{
+    color: #fff;
+}
 .tol_li li {
     margin-bottom: 10px;
 }
@@ -351,6 +353,17 @@ iframe{
     border: 0px;
 }
 @media (min-width: 969px) {
+    .examples__wrapper{
+        display: grid;
+        gap: 0;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+    .examples__item{
+        width: 100%;
+    }
+    .examples__item:not(:last-child){
+        border-right: 1px solid #f0f3f7;
+    }
     .partnership__inner{
         padding-bottom: 20px;
     }
@@ -419,14 +432,14 @@ iframe{
         width: 100%;
     }
     .prod_block .examples__item:nth-child(2){
-        border-left: 1px solid #e6e6e6;
+        border-left: 1px solid #f0f3f7;
     }
     .prod_block .examples__item:nth-child(4){
-        border-left: 1px solid #e6e6e6;
-        border-top: 1px solid #e6e6e6;
+        border-left: 1px solid #f0f3f7;
+        border-top: 1px solid #f0f3f7;
     }
     .prod_block .examples__item:nth-child(3){
-        border-top: 1px solid #e6e6e6;
+        border-top: 1px solid #f0f3f7;
     }
     .kartinka.bigSlogan{
         width: 100%;
