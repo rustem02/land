@@ -17,8 +17,9 @@ class ProfileForm(forms.ModelForm):
 #     class Meta:
 #         model = Pro
 
-
+from snowpenguin.django.recaptcha3.fields import ReCaptchaField
 class QuestionareForm(forms.ModelForm):
+    captcha = ReCaptchaField()
     class Meta:
         model = Questionaire
         fields = '__all__'

@@ -9,15 +9,16 @@ def index(request):
 
 
 def form(request):
-
+    fm = QuestionareForm()
     if request.method == 'POST':
         fm = QuestionareForm(request.POST)
 
         if fm.is_valid():
+            #captcha_score = fm.cleaned_data['captcha'].get('score')
             fm.save()
             return render(request, 'main/index.html')
 
-    return render(request, 'main/form.html')
+    return render(request, 'main/form.html', context={'fm': fm})
 
 
 def example(request):

@@ -1,8 +1,9 @@
+{% load recaptcha3 %}
 <!DOCTYPE html>
 <html lang="ru-RU">
 <head><title>Промситех</title>
 
-
+    {% recaptcha_init %} {% recaptcha_ready action_name='form' %}
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="keywords" content="">
     {#    <meta name="description" content="Мотор-редукторы со склада во Владивостоке">#}
@@ -616,6 +617,10 @@
                             персональных данных и согласие с <a href="#policy" data-fancybox="">политикой
                                 Конфиденциальности*</a></div>
                         <p>
+
+
+                            {{ fm.captcha }}
+
                             <input type="submit" value="Отправить"
                                    class="wpcf7-form-control has-spinner wpcf7-submit main__button"/></p></div>
                 </div>

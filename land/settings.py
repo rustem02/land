@@ -25,6 +25,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'main',
+    'snowpenguin.django.recaptcha3',
 ]
 
 MIDDLEWARE = [
