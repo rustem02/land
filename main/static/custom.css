@@ -7,14 +7,28 @@ h1.bigSlogan {
     text-align: center;
     padding-bottom: 0px;
     font-size: 50px;
+    position: relative;
 }
 
 .tol_li li {
     margin-bottom: 10px;
 }
-
+h1.bigSlogan span{
+    position: relative;
+    display: inline-block;
+}
+h1.bigSlogan span:after {
+    content: '';
+    display: block;
+    background-color: #e2041d;
+    width: 100px;
+    height: 2px;
+    left: 0;
+    top: 0;
+    margin-top: 8px;
+}
 .examples, .clients, .partnership, .order {
-    background: url(https://innovari-castiron.ru/images/bg_why.png);
+    background: url(./img/bg_why.png);
 }
 .examples{background: none}
 .kartinka {
@@ -44,11 +58,12 @@ h1.bigSlogan {
     width: 100%;
     height: 40%;
 }
-
+.partnership__bottom__center{
+    display: flex;
+    justify-content: center;
+}
 .zayava {
     position: relative;
-    left: 50%;
-    transform: translate(-50%, 0);
 }
 
 li {
@@ -175,7 +190,6 @@ a {
     font-weight: 300;
     font-size: 22px;
     line-height: 22px;
-    text-align: center;
 }
 
 .prod_block .examples__item__imageWrapper {
@@ -243,7 +257,16 @@ a {
     justify-content: center;
     font-size: 10px;
 }
-
+h2.slogan::after{
+    content: '';
+    display: block;
+    background-color: #e2041d;
+    width: 100px;
+    height: 2px;
+    left: 0;
+    top: 0;
+    margin-top: 18px;
+}
 .fav_list {
     padding-top: 0px;
     display: grid;
@@ -333,6 +356,9 @@ a {
     }
 }
 @media (max-width: 968px) {
+    h1.bigSlogan span:after {
+        display: none;
+    }
     .video_block{
         padding-top: 0px;
     }

@@ -489,7 +489,7 @@ body {
 .infoBlock__right {
     width: 49%;
     max-width: 49%;
-    padding: 30px 0 0 4%;
+    padding: 20px 0 0 1%;
 }
 @media only screen and (max-width: 767px) {
     .infoBlock__right {
@@ -519,16 +519,6 @@ body {
 .infoBlock__list {
     padding: 35px 0 0 0;
     position: relative;
-}
-.infoBlock__list:before {
-    content: '';
-    display: block;
-    position: absolute;
-    background-color: #e2041d;
-    width: 100px;
-    height: 2px;
-    left: 0;
-    top: 0;
 }
 .infoBlock__list__item {
     margin-bottom: 11px;
