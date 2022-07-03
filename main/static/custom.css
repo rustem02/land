@@ -2,7 +2,11 @@
     background: url('./media/logoNew.png') no-repeat;
     background-size: 98%;
 }
-
+.prod_block .examples__wrapper .examples__item__more{
+        display: none;
+    }
+.prod_block .examples__item__title {
+    text-align: center;}
 h1.bigSlogan {
     text-align: center;
     padding-bottom: 0px;
