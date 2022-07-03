@@ -423,7 +423,7 @@ iframe{
         display: none;
     }
     .prod_block .examples__item__title{
-        text-align: left;
+        text-align: center;
         font-size: 18px;
     }
     .prod_block .examples__item{
@@ -476,8 +476,8 @@ iframe{
         display: block;
     }
     .footer__inner .header__left .logo{
-        width: 200px;
-        height: 42px;
+        width: 303px;
+        height: 54px;
     }
     .video_block iframe{
         height: 280px!important;
@@ -487,11 +487,11 @@ iframe{
         overflow: hidden;
     }
     .header .logo{
-        width: 180px;
-        height: 34px;
+        width: 303px;
+        height: 54px;
     }
     .header__text{
-        text-align: left;
+        text-align: center;
     }
     .header{
         height: auto!important;

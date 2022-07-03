@@ -2,3 +2,4 @@
 *.sqlite3
 __pycache__
 localsettings.py
+cpython-39.pyc
