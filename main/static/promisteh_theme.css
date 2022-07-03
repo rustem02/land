@@ -347,7 +347,6 @@ body {
 .logo {
     width: 212px;
     height: 39px;
-    background: url('site/img/logo.svg') no-repeat;
     background-size: 98% 98%;
     text-indent: -9999px;
     overflow: hidden;
