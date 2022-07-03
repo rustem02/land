@@ -25,7 +25,30 @@ def render_table(instans):
 
 
 def svod(request):
-    return render(request, 'main/svod.html')
+
+    qs = Questionaire.objects.all().order_by('id')
+
+    context = {'l': []}
+
+
+
+    context['fields'] = qs.model._meta.fields
+
+    for item in qs:
+        d = []
+        for field in context['fields']:
+            val = getattr(item, field.name)
+            print(type(val))
+            if type(val) == bool:
+                if val:
+                    val = 'Да'
+                else:
+                    val = 'Нет'
+
+            d.append(val)
+        context['l'].append(d)
+
+    return render(request, 'main/svod.html', context=context)
 
 
 def form(request):
