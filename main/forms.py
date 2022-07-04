@@ -19,7 +19,7 @@ class ProfileForm(forms.ModelForm):
 
 from snowpenguin.django.recaptcha3.fields import ReCaptchaField
 class QuestionareForm(forms.ModelForm):
-    captcha = ReCaptchaField()
+    # captcha = ReCaptchaField()
     class Meta:
         model = Questionaire
         fields = '__all__'
@@ -28,4 +28,4 @@ class QuestionareForm(forms.ModelForm):
 class LoginForm(forms.Form):
     login = forms.CharField()
     password = forms.CharField(widget=forms.PasswordInput)
-    captcha = ReCaptchaField()
+    # captcha = ReCaptchaField()
