@@ -72,7 +72,14 @@ def form(request):
         if fm.is_valid():
             fm.save()
 
-            subject, from_email, to = 'Новая заявка на дилерство', 'dealer@prst.ru',['pribka@mail.ru','skripkin-1@yandex.ru']
+            subject, from_email, to = 'Новая заявка на дилерство', 'dealer@prst.ru',[
+                'pribka@mail.ru',
+                'privod5@prst.ru',
+                'privod12@prst.ru',
+                'vld@prst.ru',
+                'dat2@prst.ru',
+                'skripkin-1@yandex.ru',
+            ]
             text_content = 'Новая заявка на дилерство'
             cnt = render_table(fm.instance)
             html_content = render(request, 'main/formemail.html', context={'cnt': cnt}).content.decode('utf8')
