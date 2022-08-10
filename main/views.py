@@ -101,21 +101,66 @@ def form(request):
     return render(request, 'main/form.html', context={'fm': fm})
 
 
-def example(request):
+def short_page(request):
+    fm = QuestionareForm()
     if request.method == 'POST':
+        fm = QuestionareForm(request.POST)
 
-        form = ProfileForm(request.POST)
+        if fm.is_valid():
+            fm.save()
 
-        if form.is_valid():
-            form.save()
+            subject, from_email, to = 'Новая заявка на дилерство', 'dealer@prst.ru',['pribka@mail.ru','skripkin-1@yandex.ru']
+            text_content = 'Новая заявка на дилерство'
+            cnt = render_table(fm.instance)
+            html_content = render(request, 'main/formemail.html', context={'cnt': cnt}).content.decode('utf8')
+            email = EmailMultiAlternatives(subject, text_content, from_email, to, )
+            email.attach_alternative(html_content, 'text/html')
+            email.send()
 
-            # return HttpResponseRedirect('/POST/')
 
 
-    else:
-        form = ProfileForm()
+        else:
+            subject, from_email, to = 'Ошибка в заявке на дилерство', 'dealer@prst.ru', 'pribka@mail.ru'
+            text_content = 'Ошибка в заявке на дилерство'
 
-    return render(request, 'main/example.html', {'form': form})
+            html_content = render(request, 'main/formemail.html', context={'fm': fm}).content.decode('utf8')
+            email = EmailMultiAlternatives(subject, text_content, from_email, [to], )
+            email.attach_alternative(html_content, 'text/html')
+            email.send()
+
+        return render(request, 'main/form_complete.html')
+
+    return render(request, 'main/short_page.html', context={'fm': fm})
+
+
+def main_page(request):
+    fm = QuestionareForm()
+    if request.method == 'POST':
+        fm = QuestionareForm(request.POST)
+
+        if fm.is_valid():
+            fm.save()
+
+            subject, from_email, to = 'Новая заявка на дилерство', 'dealer@prst.ru',['pribka@mail.ru','skripkin-1@yandex.ru']
+            text_content = 'Новая заявка на дилерство'
+            cnt = render_table(fm.instance)
+            html_content = render(request, 'main/formemail.html', context={'cnt': cnt}).content.decode('utf8')
+            email = EmailMultiAlternatives(subject, text_content, from_email, to, )
+            email.attach_alternative(html_content, 'text/html')
+            email.send()
+
+
+
+        else:
+            subject, from_email, to = 'Ошибка в заявке на дилерство', 'dealer@prst.ru', 'pribka@mail.ru'
+            text_content = 'Ошибка в заявке на дилерство'
+
+            html_content = render(request, 'main/formemail.html', context={'fm': fm}).content.decode('utf8')
+            email = EmailMultiAlternatives(subject, text_content, from_email, [to], )
+            email.attach_alternative(html_content, 'text/html')
+            email.send()
+
+        return render(request, 'main/form_complete.html')
 
 
 def final_form(request, secret):

@@ -424,24 +424,118 @@
                     получения общего представления о деятельности Вашей фирмы для принятия решения о дальнейшей
                     совместной работе. </h4> <br>
 
-                    <input type="text" name="text" value="" size="40" required
-                           class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-email main__input input__email"
-                           aria-invalid="false" placeholder="ФИО*"/>
 
-                    <input type="tel" name="company_contact_phone"
+
+
+
+                    <p>Краткое описание Вашего бизнеса*</p><br>
+                    <input type="text" name="company_destination" value="" size="40" required
+                           class="wpcf7-form-control wpcf7-text main__input "
+                           aria-required="true" aria-invalid="false" placeholder="Укажите кратко*"/>
+
+                    <p>Сколько лет на рынке\ из них на рынке автоматизации?*</p><br>
+
+                    <input type="number" name="company_amount"
                            value="" size="40" required
-                           class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel main__input input__phone"
-                           aria-required="true" aria-invalid="false"
-                           placeholder="Телефон контактного лица*"/>
+                           class="wpcf7-form-control wpcf7-text wpcf7-tel main__input "
+                           aria-required="true"
+                           aria-invalid="false"
+                           placeholder="Укажите год*"/>
 
-                    <input type="email" name="email" value="" size="40" required
-                           class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-email main__input input__email"
-                           aria-invalid="false" placeholder="Ваш email*"/>
+                    <p>С какими брэндами вы работаете?*</p><br>
+                    <input
+                            type="text" name="company_partners" value="" size="40"
+                        required    class="wpcf7-form-control wpcf7-text wpcf7-tel main__input " aria-required="true"
+                            aria-invalid="false" placeholder="Ваш ответ*"/>
 
-                    <input type="text" name="text" value="" size="40" required
-                           class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-email main__input input__email"
-                           aria-invalid="false" placeholder="ИИН*"/>
 
+                    <p>Количество сотрудников \ из них продавцов \ из них инженеров в фирме ? </p>
+                    <br>
+                    <input type="text"
+                           name="company_personal"
+                           value="" required
+                           size="40"
+                           class="wpcf7-form-control wpcf7-text main__input "
+                           aria-required="true"
+                           aria-invalid="false"
+                           placeholder="Ваш ответ*"/>{% csrf_token %}
+
+                    <p>Есть ли у Вашего предприятия филиалы в других регионах РФ? (если есть, то в каких)</p><br><span
+                            class="wpcf7-form-control-wrap menu-782">
+<select name="company_has_filial"
+        class="wpcf7-form-control wpcf7-select main__select"
+        aria-invalid="false"> <option
+        value="false">Нет</option> <option value="true">Да</option></select> </span><br/>
+                    <input
+                            type="text" name="company_regions" value="" size="40"
+                            class="wpcf7-form-control wpcf7-text wpcf7-tel main__input " aria-required="true"
+                            aria-invalid="false" placeholder="Укажите регионы"/>
+                    <p> В каких отраслях промышленности Вы наиболее активны? </p><br><span
+                            class="wpcf7-form-control-wrap text">
+                <input type="text" name="company_destination_activity"
+       value="" size="40" required
+       class="wpcf7-form-control wpcf7-text wpcf7-tel main__input input__text"
+       aria-required="true" aria-invalid="false"
+       placeholder="Ваш ответ*"/> </span>
+
+                    <p>Какие дополнительные (к продаже/проекту) услуги Вы оказываете клиентам? (пуско-наладка, доставка,
+                        консультации/техподдержка, предоставление на испытания и т.д.) Предоставляете ли Вы клиентам
+                        особые условия по оплате (отсрочки платежа и т.п.)? </p><br><span
+                            class="wpcf7-form-control-wrap text">
+<input type="text" name="company_different_services"
+       value="" size="40"
+       class="wpcf7-form-control wpcf7-text wpcf7-tel main__input input__text"
+       aria-required="true" aria-invalid="false"
+       placeholder="Ваш ответ"/></span>
+                    <p>Укажите интересующие Вас товарные группы. Указываете только те, которыми планируете заниматься
+                        (продвигать) в качестве основных.</p><br>
+                    <span class="wpcf7-form-control-wrap menu-782">
+                        <label>
+<input
+   name="prom_kipia"     type="checkbox">Промышленная автоматика и КИПиА, в т.ч.</label><br>
+                        <label>
+<input
+    name="non_contact"    type="checkbox">Бесконтактные датчики</label><br>
+                        <label>
+<input name="optical" type="checkbox">Оптические датчики</label><br>
+                        <label>
+<input
+     name="indikator"   type="checkbox">Управление и индикация</label><br>
+                        <label>
+<input      name="temperature"      type="checkbox">Датчики давления и температуры</label><br>
+                        <label>
+<input
+     name="ibp"   type="checkbox">Блоки питания</label><br>
+                        <label>
+<input
+    name="encoder"     type="checkbox">Энкодеры</label><br>
+                        <label>
+<input  name="converter"  type="checkbox">Частотные преобразователи</label><br>
+                        <label>
+<input  name="motor_reductor"
+        type="checkbox">Мотор-редукторы и электродвигатели</label><br>
+                        <label>
+<input  name="baumer"   type="checkbox">Датчики Baumer (Швейцария/Германия): оптические, лазерные, ультразвуковые, касания, индуктивные, емкостные</label><br>
+                        <label>
+<input name="process_baumer"
+        type="checkbox">Датчики процессов для пищевых производств Baumer (уровня, давление, температуры, концентрации) в пищевом исполнении</label><br><label>
+<input name="cement_pesok_zerno"
+        type="checkbox">Датчики уровня сыпучих материалов (песок, цемент, зерно, комбикорм)</label>
+                        <br>
+                        <label>
+<input name="convair_security"
+        type="checkbox">Конвейерная безопасность (аварийный выключатель конвейера, датчик схода ленты, датчик препятствия, датчик затора, датчик перегруза)</label><br><label>
+<input name="light_indication"
+        type="checkbox">Светосигнальное оборудование (светосигнальные колонны и маячки)</label><br><label>
+<input name="other_device"
+        type="checkbox">Другое</label></span> <br>
+                    <input type="text" name="other_device_description"
+       value="" size="40"
+       class="wpcf7-form-control wpcf7-text wpcf7-tel main__input input__text"
+       aria-required="true" aria-invalid="false"
+       placeholder="Ваши варианты"/>
+
+                    </span> <br/>
                     <div class="order__form">
                         <div class="form__info">Нажимая на кнопку "Отправить", Вы даете согласие на обработку своих
                             персональных данных и согласие с <a href="#policy" data-fancybox="">политикой
@@ -449,7 +543,7 @@
                         <p>
 
 
-                            {{ fm.captcha }}
+
 
                             <input type="submit" value="Отправить"
                                    class="wpcf7-form-control has-spinner wpcf7-submit main__button"/></p></div>
