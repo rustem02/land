@@ -411,7 +411,7 @@
             <div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p>
                 <ul></ul>
             </div>
-            <form action="/form/" method="post" class="wpcf7-form init"
+            <form method="post" class="wpcf7-form init"
                   data-status="init">
 
                 <div class="order__form__left"><h4> Если Вы - руководитель компании, занимающейся автоматизацией и/или
@@ -424,7 +424,7 @@
                     получения общего представления о деятельности Вашей фирмы для принятия решения о дальнейшей
                     совместной работе. </h4> <br>
 
-                    <input type="text" name="text" value="" size="40" required
+                    <input type="text" name="fio" value="" size="40" required
                            class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-email main__input input__email"
                            aria-invalid="false" placeholder="ФИО*"/>
 
@@ -438,9 +438,9 @@
                            class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-email main__input input__email"
                            aria-invalid="false" placeholder="Ваш email*"/>
 
-                    <input type="text" name="text" value="" size="40" required
-                           class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-email main__input input__email"
-                           aria-invalid="false" placeholder="ИИН*"/>
+                    <input type="text" name="inn" value="" size="40" required
+                           class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-email main__input input__inn"
+                           aria-invalid="false" placeholder="ИИН*"/>{% csrf_token %}
 
                     <div class="order__form">
                         <div class="form__info">Нажимая на кнопку "Отправить", Вы даете согласие на обработку своих

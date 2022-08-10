@@ -21,6 +21,11 @@ class QuestionareForm(forms.ModelForm):
         model = Questionaire
         fields = '__all__'
 
+class ShortQuestionaireForm(forms.ModelForm):
+    # captcha = ReCaptchaField()
+    class Meta:
+        model = ShortQuestionaire
+        fields = ['company_contact_phone', 'email', 'fio', 'inn']
 
 class LoginForm(forms.Form):
     login = forms.CharField()

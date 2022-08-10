@@ -2,7 +2,7 @@ from django.http import HttpResponseRedirect, HttpResponseNotFound,HttpResponse
 from django.shortcuts import render
 from .forms import *
 from django.core.mail import EmailMultiAlternatives
-from .models import ShortQuestionaire
+from .models import *
 
 
 # Create your views here.
@@ -68,43 +68,48 @@ def svod(request):
     return render(request, 'main/svod.html', context=context)
 
 
-def form(request):
-    fm = QuestionareForm()
-    if request.method == 'POST':
-        fm = QuestionareForm(request.POST)
-
-        if fm.is_valid():
-            fm.save()
-
-            subject, from_email, to = 'Новая заявка на дилерство', 'dealer@prst.ru', ['pribka@mail.ru',
-                                                                                      'skripkin-1@yandex.ru']
-            text_content = 'Новая заявка на дилерство'
-            cnt = render_table(fm.instance)
-            html_content = render(request, 'main/formemail.html', context={'cnt': cnt}).content.decode('utf8')
-            email = EmailMultiAlternatives(subject, text_content, from_email, to, )
-            email.attach_alternative(html_content, 'text/html')
-            email.send()
+# def form_complete(request):
+#     return render(request, 'main/form_complete.html')
 
 
 
-        else:
-            subject, from_email, to = 'Ошибка в заявке на дилерство', 'dealer@prst.ru', 'pribka@mail.ru'
-            text_content = 'Ошибка в заявке на дилерство'
-
-            html_content = render(request, 'main/formemail.html', context={'fm': fm}).content.decode('utf8')
-            email = EmailMultiAlternatives(subject, text_content, from_email, [to], )
-            email.attach_alternative(html_content, 'text/html')
-            email.send()
-
-        return render(request, 'main/form_complete.html')
-
-    return render(request, 'main/form.html', context={'fm': fm})
+# def form(request):
+#     fm = QuestionareForm()
+#     if request.method == 'POST':
+#         fm = QuestionareForm(request.POST)
+#
+#         if fm.is_valid():
+#             fm.save()
+#
+#             subject, from_email, to = 'Новая заявка на дилерство', 'dealer@prst.ru', ['pribka@mail.ru',
+#                                                                                       'skripkin-1@yandex.ru']
+#             text_content = 'Новая заявка на дилерство'
+#             cnt = render_table(fm.instance)
+#             html_content = render(request, 'main/formemail.html', context={'cnt': cnt}).content.decode('utf8')
+#             email = EmailMultiAlternatives(subject, text_content, from_email, to, )
+#             email.attach_alternative(html_content, 'text/html')
+#             email.send()
+#
+#
+#
+#         else:
+#             subject, from_email, to = 'Ошибка в заявке на дилерство', 'dealer@prst.ru', 'pribka@mail.ru'
+#             text_content = 'Ошибка в заявке на дилерство'
+#
+#             html_content = render(request, 'main/formemail.html', context={'fm': fm}).content.decode('utf8')
+#             email = EmailMultiAlternatives(subject, text_content, from_email, [to], )
+#             email.attach_alternative(html_content, 'text/html')
+#             email.send()
+#
+#         return render(request, 'main/form_complete.html')
+#
+#     return render(request, 'main/form.html', context={'fm': fm})
 
 
 def short_page(request):
-    fm = QuestionareForm()
+    fm = ShortQuestionaireForm()
     if request.method == 'POST':
-        fm = QuestionareForm(request.POST)
+        fm = ShortQuestionaireForm(request.POST)
 
         if fm.is_valid():
             fm.save()
@@ -127,40 +132,14 @@ def short_page(request):
             email = EmailMultiAlternatives(subject, text_content, from_email, [to], )
             email.attach_alternative(html_content, 'text/html')
             email.send()
+            return HttpResponse("Error form")
 
         return render(request, 'main/form_complete.html')
 
     return render(request, 'main/short_page.html', context={'fm': fm})
 
 
-def main_page(request):
-    fm = QuestionareForm()
-    if request.method == 'POST':
-        fm = QuestionareForm(request.POST)
 
-        if fm.is_valid():
-            fm.save()
-
-            subject, from_email, to = 'Новая заявка на дилерство', 'dealer@prst.ru',['pribka@mail.ru','skripkin-1@yandex.ru']
-            text_content = 'Новая заявка на дилерство'
-            cnt = render_table(fm.instance)
-            html_content = render(request, 'main/formemail.html', context={'cnt': cnt}).content.decode('utf8')
-            email = EmailMultiAlternatives(subject, text_content, from_email, to, )
-            email.attach_alternative(html_content, 'text/html')
-            email.send()
-
-
-
-        else:
-            subject, from_email, to = 'Ошибка в заявке на дилерство', 'dealer@prst.ru', 'pribka@mail.ru'
-            text_content = 'Ошибка в заявке на дилерство'
-
-            html_content = render(request, 'main/formemail.html', context={'fm': fm}).content.decode('utf8')
-            email = EmailMultiAlternatives(subject, text_content, from_email, [to], )
-            email.attach_alternative(html_content, 'text/html')
-            email.send()
-
-        return render(request, 'main/form_complete.html')
 
 
 def final_form(request, secret):
@@ -172,14 +151,46 @@ def final_form(request, secret):
             short_quest_obj = short_quest.last()
             if short_quest_obj.secret_used:  # Проверяем не использован ли, если использован
                 # кидаем на шаблон с текстом "Ваша заявку уже отправлена"
-                return (request, 'main\quest_complete')  # TODO
+                return render(request, 'main/form_complete.html')
             else:
-                form = None  # сюда попадем когда мы можем заполнять форму
+                # form = None  # сюда попадем когда мы можем заполнять форму
                 # в конце делаем так
                 # short_quest_obj.secret_used = True
                 # short_quest_obj.save()
-                # TODO
-                return HttpResponse('ok')
+
+                fm = QuestionareForm()
+                if request.method == 'POST':
+                    fm = QuestionareForm(request.POST)
+
+                    if fm.is_valid():
+                        fm.save()
+
+                        subject, from_email, to = 'Новая заявка на дилерство', 'dealer@prst.ru', ['pribka@mail.ru',
+                                                                                                  'skripkin-1@yandex.ru']
+                        text_content = 'Новая заявка на дилерство'
+                        cnt = render_table(fm.instance)
+                        html_content = render(request, 'main/formemail.html', context={'cnt': cnt}).content.decode(
+                            'utf8')
+                        email = EmailMultiAlternatives(subject, text_content, from_email, to, )
+                        email.attach_alternative(html_content, 'text/html')
+                        email.send()
+                        short_quest_obj.secret_used = True
+                        short_quest_obj.save()
+
+
+                    else:
+                        subject, from_email, to = 'Ошибка в заявке на дилерство', 'dealer@prst.ru', 'pribka@mail.ru'
+                        text_content = 'Ошибка в заявке на дилерство'
+
+                        html_content = render(request, 'main/formemail.html', context={'fm': fm}).content.decode('utf8')
+                        email = EmailMultiAlternatives(subject, text_content, from_email, [to], )
+                        email.attach_alternative(html_content, 'text/html')
+                        email.send()
+                        return HttpResponse("Error form")
+
+                    return render(request, 'main/form_complete.html')
+
+                return render(request, 'main/main_page.html',context={'fm': fm})
 
 
     # Сюда попадем если нету секрета в базе
