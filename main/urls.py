@@ -5,6 +5,6 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('form/', views.form, name='form'),
     path('svod/', views.svod, name='svod'),
-    path('example/', views.example, name='example'),
-
+    path('short_page/', views.short_page, name='short_page'),
+    path('main_page/', views.main_page, name='main_page'),
 ]
