@@ -111,3 +111,5 @@ def example(request):
         form = ProfileForm()
 
     return render(request, 'main/example.html', {'form': form})
+
+
