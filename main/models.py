@@ -1,4 +1,5 @@
 from django.db import models
+from uuid import uuid4
 
 
 # Create your models here.
@@ -29,7 +30,31 @@ class Profile(models.Model):
         return self.email
 
 
+class ShortQuestionaire(models.Model):
+    created = models.DateTimeField(auto_now_add=True,
+                                   verbose_name='Дата записи')
+    company_contact_phone = models.CharField(max_length=255,
+                                             blank=False,
+                                             verbose_name='Телефон')
+    email = models.EmailField(blank=False,
+                              verbose_name='Email заявителя')
+    fio = models.CharField(max_length=255,
+                           verbose_name='Фамилия Имя')
+    inn = models.CharField(blank=False,
+                           max_length=255,
+                           verbose_name="ИНН")
+    secret = models.UUIDField(default=uuid4,
+                              # editable=False
+                              )
+    secret_used = models.BooleanField(default=False,
+                                      verbose_name='Секретный код использован')
+
+
 class Questionaire(models.Model):
+    short_version = models.ForeignKey(ShortQuestionaire,
+                                      on_delete=models.PROTECT,
+                                      null=True,
+                                      verbose_name='Начальная заявка')
     choices = ((True, 'Да'), (False, 'Нет'),)
     created = models.DateTimeField(auto_now_add=True,
                                    verbose_name='Дата записи')
@@ -64,24 +89,24 @@ class Questionaire(models.Model):
                                        verbose_name='Какой оборот у Вашей компании за прошлый год?')
 
     company_targeting = models.TextField(blank=True, default='',
-        verbose_name='Средства  для расширения рынка сбыта и привлечения новых заказчиков')
+                                         verbose_name='Средства  для расширения рынка сбыта и привлечения новых заказчиков')
 
     company_partners = models.TextField(blank=False,
                                         verbose_name="С какими фирмами (поставщиками, брэндами) по частотному приводу, мотор-редукторам, датчикам сотрудничаете и как долго?")
 
     company_deploy = models.TextField(blank=True, default='',
-        verbose_name="Есть ли собственные разработки (краткое описание)")
+                                      verbose_name="Есть ли собственные разработки (краткое описание)")
     company_personal = models.TextField(blank=False,
                                         verbose_name="Количество сотрудников \ из них продавцов \ из них инженеров в фирме ?")
-    company_ceo_has_tech = models.BooleanField(  verbose_name='Имеет ли управляющий (директор) техническое образование?')
+    company_ceo_has_tech = models.BooleanField(verbose_name='Имеет ли управляющий (директор) техническое образование?')
     company_has_filial = models.BooleanField(verbose_name='Есть ли у Вашего предприятия филиалы в других регионах РФ? ')
     company_regions = models.TextField(blank=True, default='',
-        verbose_name="Регионы, где есть филиал")
+                                       verbose_name="Регионы, где есть филиал")
     company_destination_activity = models.TextField(blank=False,
                                                     verbose_name="В каких отраслях промышленности Вы наиболее активны? ")
 
     company_different_services = models.TextField(blank=True, default='',
-        verbose_name="Дополнительные сервисы компании")
+                                                  verbose_name="Дополнительные сервисы компании")
     prom_kipia = models.BooleanField(verbose_name='Промышленная автоматика и КИПиА, в т.ч.')
     non_contact = models.BooleanField(verbose_name='Бесконтактные датчики')
     optical = models.BooleanField(verbose_name='Оптические датчики')
@@ -102,7 +127,7 @@ class Questionaire(models.Model):
     light_indication = models.BooleanField(
         verbose_name='Светосигнальное оборудование (светосигнальные колонны и маячки)')
     other_device = models.BooleanField(verbose_name='Другое')
-    other_device_description = models.TextField(blank=True, default='',verbose_name='Описание иного оборудования')
+    other_device_description = models.TextField(blank=True, default='', verbose_name='Описание иного оборудования')
     company_can_have_dealer_page = models.TextField(blank=False,
                                                     verbose_name="Готовы ли Вы освоить Личный кабинет дилера для самостоятельной работы с клиентом после заключения договора в течении 3-4 дней?")
 # class Questions(models.Model):
