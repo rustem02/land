@@ -75,3 +75,6 @@ class Questionaire(models.Model):
     other_device = models.BooleanField(verbose_name='Другое')
     other_device_description = models.TextField(blank=True, default='', verbose_name='Описание иного оборудования')
 
+    # class Meta:
+    #     model = ShortQuestionaire
+    #     exclude = 'short_version'

@@ -120,7 +120,8 @@ def short_page(request):
             html_content = render(request, 'main/formemail.html', context={'cnt': cnt}).content.decode('utf8')
             email = EmailMultiAlternatives(subject, text_content, from_email, to, )
             email.attach_alternative(html_content, 'text/html')
-            email.send()
+            # email.send()
+            HttpResponse('Отправлено!')
 
 
 
@@ -131,7 +132,7 @@ def short_page(request):
             html_content = render(request, 'main/formemail.html', context={'fm': fm}).content.decode('utf8')
             email = EmailMultiAlternatives(subject, text_content, from_email, [to], )
             email.attach_alternative(html_content, 'text/html')
-            email.send()
+            # email.send()
             return HttpResponse("Error form")
 
         return render(request, 'main/form_complete.html')
@@ -151,13 +152,13 @@ def final_form(request, secret):
             short_quest_obj = short_quest.last()
             if short_quest_obj.secret_used:  # Проверяем не использован ли, если использован
                 # кидаем на шаблон с текстом "Ваша заявку уже отправлена"
-                return render(request, 'main/form_complete.html')
+                return render(request, 'main/form_complete.html')  # TODO
             else:
-                # form = None  # сюда попадем когда мы можем заполнять форму
+                form = None  # сюда попадем когда мы можем заполнять форму
                 # в конце делаем так
                 # short_quest_obj.secret_used = True
                 # short_quest_obj.save()
-
+                # TODO
                 fm = QuestionareForm()
                 if request.method == 'POST':
                     fm = QuestionareForm(request.POST)
@@ -173,7 +174,7 @@ def final_form(request, secret):
                             'utf8')
                         email = EmailMultiAlternatives(subject, text_content, from_email, to, )
                         email.attach_alternative(html_content, 'text/html')
-                        email.send()
+                        # email.send()
                         short_quest_obj.secret_used = True
                         short_quest_obj.save()
 
@@ -185,7 +186,7 @@ def final_form(request, secret):
                         html_content = render(request, 'main/formemail.html', context={'fm': fm}).content.decode('utf8')
                         email = EmailMultiAlternatives(subject, text_content, from_email, [to], )
                         email.attach_alternative(html_content, 'text/html')
-                        email.send()
+                        # email.send()
                         return HttpResponse("Error form")
 
                     return render(request, 'main/form_complete.html')

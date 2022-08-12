@@ -20,6 +20,9 @@ class QuestionareForm(forms.ModelForm):
     class Meta:
         model = Questionaire
         fields = '__all__'
+        # exclude = 'short_version'
+
+
 
 class ShortQuestionaireForm(forms.ModelForm):
     # captcha = ReCaptchaField()
